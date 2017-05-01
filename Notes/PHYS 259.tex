@@ -1,0 +1,1163 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%% LATEX SAMPLE FILE %%%%%%%%%%%%%%%%
+% A line which starts with a % sign
+% is called a COMMENT. It is IGNORED
+% by the LaTeX processor.
+
+% Include math
+\usepackage{amsmath,amsthm,amssymb}
+% Include links
+\usepackage{hyperref}
+
+
+%%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
+% Let's define some theorem environments
+% To use later in the paper
+\theoremstyle{plain} % other options: definition, remark
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+% By including [theorem], the lemma follows the numbering of theorem
+% e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition} % the star prevents numbering
+
+\theoremstyle{example}
+\newtheorem*{example}{Example}
+% Remarks
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\DeclareMathOperator{\sinc}{sinc}
+
+
+%%%%%%%%%%%%%%  PAGE SETUP %%%%%%%%%%%%%%%%%
+% LaTeX has big default margins
+% The following sets them to 1in
+\usepackage[margin=1.5in]{geometry}
+
+% The following sets up some headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Electricity and Magnetism} % Left Header
+\rhead{\thepage} % Right Header
+\cfoot{} % Center Foot (empty)
+
+
+
+
+
+
+%%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
+% You can define your own shortcuts too.
+% Examples of custom commands
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+\begin{document}
+
+% Set up a title
+\title{PHYS 259}
+\author{David Ng}
+\date{Winter 2017}
+\maketitle
+
+% This line makes a ToC
+\tableofcontents
+
+% This line starts a new page
+\eject
+
+%%%%%%%%%%%%% January 11 %%%%%%%%%%%%%%%%%%%%
+
+\section{January 11, 2017}
+\subsection{Fundamental Particles}
+
+All fundamental particles can be classified according to two observable parameters, \textbf{mass} $m$ and \textbf{charge} $q$. We note that this simplified model of he universe is incredibly effective at explaining a wide range of physical phenomena. There are four fundamental forces in nature:
+
+\begin{enumerate}
+\item \textbf{Strong Nuclear Force} is responsible for holding together protons and neutrons, as well as holding atomic nuclei together. It is over a very short range, around $10^{-15}$ m.
+	\item \textbf{Weak Nuclear Force} is responsible for radioactive decay and fusion reactions in the sum. It has a very short range, around $10^{-17}$ m. 
+	\item \textbf{Electromagnetic Force} is responsible for nearly everything we observe. It is an extremely important force to understand that ranges over a long range. 
+	\item \textbf{Gravitational Force} is responsible for planetary orbits, holding together galaxies and maintaining an atmosphere. It has a long range. 
+\end{enumerate}
+
+An electric charge is an intrinsic property of particles. It is a quantity that determines the strength of the electric force between two objects. It cannot be created or destroyed, but can transfer from one object to another. Like charges repel, while opposite charges attract. Electric charge is always quantized. Charge always comes in some integer multiple of some fundamental charge $e$, which is the charge of the electron. 
+
+Almost all of the mass of an atom is contained in the nucleus, while almost all of the space is occupied by the electron cloud. Therefore, the diameter of the nucleus is much smaller than the diameter of its corresponding atom. Thus, electric charge comes in discrete packages, as does photons
+
+\textbf{Insulators} do not conduct electricity, since the electrons are not free to move. The valence electrons are tightly bounded. \textbf{Conductors} on the other hand, do conduct, since the electrons are free to move. In conductors, valence electrons form a ``sea of electrons". We have two kinds of charges, positive and negative. We always draw the force vector with the tail on the particle. We recall that same charges repel, while opposite charges attract. 
+
+\subsection{Charge Experiment}
+
+When we rub a balloon on our hair, we cannot create charged particles. However, when rubbing, electrons may be transferred from one to the other. This results in a net transfer of charge. In an isolated atom, the electron cloud is centered on the nucleus. When an external charge polarizes the atom, the polarized atom becomes an electric dipole. This results in polarized atoms. In the case of the balloon experiment, the local external charge on the side of the balloon that was rubbed agains the hair causes a net force on the wall, which is an insulator. 
+
+Negatively charged valence electrons inside a conductor are able to freely move around. As a result, while the positively charged atomic cores are fixed in place. When we bring a positive rod near a conductor, the metal's net charge is still zero, but it has been polarized by the charged rod. Free electrons are attracted to the positively charged rod, inducing a polarization. A deficit of electrons on the far side of the conductor results.
+
+\section{January 12, 2017}
+\subsection{Coulomb's Law}
+
+We know that the force between charged objects varies with distance, and this force also depends on the amount of charge. \textbf{Coulomb's law} states that the electric field decreases with distances. The force that describes this is Coulomb's force. Coulomb's law describes the force that charged particles exert on each other. For point charges, the force always acts along the line joining the charges. We can formulate Coulomb's law in two different ways:
+$$F = K\frac{q_1q_2}{r^2},$$
+where $K$, the electrostatic constant, is equal to $8.99 \times 10^9\frac{N\cdot m^2}{C^2}$,  and
+$$F = \frac{1}{4 \pi \epsilon_0}\frac{q_1q_2}{r^2},$$
+where $\epsilon_0$, the permittivity of free space, is $\frac{1}{4 \pi K} = 8.85\times10^{-12}\frac{C^2}{N\cdot m^2}$. 
+
+To compute the magnitude and direction, we first follow the following steps:
+\begin{enumerate}
+	\item Find the distance between the charges. 
+	\item Draw a line passing through the two charges. 
+	\item The force on $q_1$ due to $q_2$ has its tail at location 1, and points either towards $q_2$ or away from $q_2$. 
+	\item Pick the direction according to the basic rule of charges, where like charges repel and opposite charges attract. 
+\end{enumerate}
+
+The SI unit for charge is the \textbf{coulomb} ($C$). Fundamental charge is the smallest possible amount of free charge, which is equal to the charge of a proton,
+$$e = 1.60 \times 10^{-19} C.$$
+Therefore, we note that 1 $C = 6.25 \times 10^{18}$ protons. We sometimes use microcoulombs ($10^{-6}C$) and nanocoulombs ($10^{-9} C$). 
+
+\subsection{Superposition Principle}
+The total force on a point charge $q_3$ is the vector sum of the individual forces acting on the charge by both $q_1$ and $q_2$. We can consider the building blocks of electric charge by considering the effect of a point charge on positive charges $q$ located at any location relative to the point charge. If the point charge is also positive, the electric force on the charges $q$ would be directed outwards, with a decreasing magnitude as $q$ increases in distance from the point charge. In the case that the point charge is negative, the point charges would be attracted instead. 
+\begin{remark}
+$\vec{i}$ corresponds with the positive x axis, $\vec{j}$ corresponds to the positive y axis, and $\vec{k}$ corresponds to the positive $z$ axis. 
+\end{remark}
+
+\section{January 13, 2017}
+\subsection{Van de Graff Generator}
+
+A \textbf{Van de Graaf} generator uses a moving belt to accumulate electric charge on a hollow metal globe on the top of an insulated column, creating high electric potentials. Without a potential difference, there is no discharge through the air to the ground. By slowing the discharge with a lightning rod, the discharge to ground slows, and no visible instant jump discharge occurs. 
+
+\section{January 16, 2017}
+\subsection{Coulomb's Law Examples}
+
+\begin{example}
+Suppose that the force of $q_1$ on $q_3$ is $\vec{F}_{13} = +3N$, and the force of $q_3$ on $q_1$ is $\vec{F}_{31} = F_{31}\hat{i}$. Determine the component $F_{31}$.
+\end{example}
+
+According to Newton's Third Law, we recall that the force is equal in magnitude and opposite in direction. Therefore, $\vec{F}_{13} = \vec{F}_{31}$. Thus, the scalar factor by which we multiply the x component is $-3N$. 
+
+\begin{example}
+Determine the total electric force on $q_1$ given that $q_3$ has the same charge and is $d$ to the right of $q_1$, and $q_2$ has the opposite charge and is $2d$ from $q_1$.
+\end{example}
+
+We apply Coulomb's Law to determine the force of $\vec{F}_{21}$ and $\vec{F}_{31}$. Since the charges are $\pm 1 C$, and the distance between charges is $1m$ and $2m$ respectively, we can use $K = 8.99\times10^{-9}\frac{N\cdot m^2}{C^2}$ to find that the forces become
+$$\|\vec{F}_{31}\| = 8.99\times10^{-9}N,$$
+$$\|\vec{F}_{21}\| =2.25\times10^{-9}N.$$
+Taking the direction into consideration, we note that the force towards $q_1$ is greater than that away from $q_1$. Therefore, the net force becomes 
+$$\vec{F}_{net} = \left(-6.74\times10^{-9}N\right)\hat{i}.$$
+
+\section{January 28, 2017}
+\subsection{Coulomb's Law Examples Cont'd}
+
+\begin{example}
+Let $q_1 = +2C$, $q_2 = +5C$, and $r=10m$. Determine the electrostatic force on the charges, given that they are positioned at $30^{\circ}$ from each other. 
+\end{example}
+
+We first determine the unit vector in this direction. Wr note that $\hat{r}_{12} = \cos\left(30^{\circ}\right)\hat{i} + \sin\left(30^{\circ}\right)\hat{j}$. We apply Coulomb's law to determine that 
+\begin{align*}
+	\vec{F}_{12} &= K\frac{q_1q_2}{r^2}\hat{r}_{12}\\
+	&= \left(8.99\times10^9Nm^2/C^2\right)\frac{(2C)(5C)}{(10m)^2}\hat{r}_{12}\\
+	&= \left(8.99\times10^8N\right)\hat{r}_{12}\\
+	&= 8.99\times10^8\left(\cos\left(30^{\circ}\right)+\sin\left(30^{\circ}\right)\right)N
+\end{align*}
+Similarly, we note that $\vec{F}_{21} = 8.99\times10^8\left(-\cos\left(30^{\circ}\right)-\sin\left(30^{\circ}\right)\right)N$.
+
+\begin{remark}
+We can use the Pythagorean Theorem and the definition of trigonometric functions to rewrite our expressions for electrostatic force. 
+\end{remark}
+
+\subsection{Electric Force of Dipole}
+
+Consider a dipole consisting of a positive and negative charge, with charges $q$ and $-q$ located $d$ apart. Another charge $Q$ is located $x$ away on the axis perpendicular to the center of the dipole. Since the horizontal components cancel due to symmetry, we can simply add the \textbf{vertical components} to determine an expression for the electric force,
+$$F = 2\left(\frac{KqQ}{x^2+\left(\frac{d}{2}\right)^2}\right)\sin\theta.$$
+However, we can express $$\sin\theta = \frac{\left(\frac{d}{2}\right)}{\sqrt{x^2+\left(\frac{d}{2}\right)^2}},$$
+so the final expression becomes 
+$$F = \frac{KqQd}{\left(x^2+\left(\frac{d}{2}\right)^2\right)^{\frac{3}{2}}}.$$
+
+
+\section{January 19, 2017}
+\subsection{Electric Force of Line of Charge}
+
+Consider a line of charge $L$ with a total charge $Q$. That is, instead of a discrete number of charges, we have a continuous set of charges in a line. We note that the linear charge density is given as
+$$\lambda = \frac{Q}{L}.$$
+In the case that the line of charge is positioned vertically, we note that the y component of the charge cancels out. We are therefore concerned only with determining the \textbf{horizontal component}. The electrostatic force due to a line of charge on a point charge is given by
+$$F = \frac{KqQ}{d\sqrt{\left(\frac{L}{2}\right)^2+d^2}},$$
+where $K$ is the electrostatic constant, $d$ is the distance from the point with charge $q$ to the centre of the line of charge, $Q$ is the total charge of the rod of length $L$. 
+
+We can also consider the limit as $d>>L$ or when $d<<L$. In the case that $d>>L$, the wire line of charge appears to be a point charge since $\left(\frac{L}{2}\right)^2+d^2 \approx d^2$. Therefore, we can use the simplified expression 
+$$F = \frac{kqQ}{d^2}.$$
+In the case that $d<<L$, we note that since we are near the line of charge, the length appears to be infinite since $\left(\frac{L}{2}\right)^2+d^2 \approx \left(\frac{L}{2}\right)^2$. Therefore, we can use the simplified expression 
+$$F = \frac{2kq\lambda}{d}.$$
+
+
+
+\section{January 20, 2017}
+\subsection{Electric Force Examples}
+
+\begin{example}
+Calculate the net force on particle 1 with a charge of $+2q$ located at the bottom left corner, from particle 2 with a charge of $-2q$ located at the bottom right corner, particle 3 with a charge of $-q$ located at the top right corner, and particle 4 with a charge of $+q$ located at the top left corner. They form a square with side lengths $a$. 
+\end{example}
+
+We apply the superposition principle with Coulomb's law to determine that $$\vec{F}_{21} = 4K\frac{q^2}{a^2}\hat{i},$$ 
+$$\vec{F}_{41} = -2K\frac{q^2}{a^2}\hat{j},$$
+$$\vec{F}_{31} = K\frac{q^2}{a^2}\left(\cos\left(45^{\circ}\right)\hat{i}+\sin\left(45^{\circ}\right)\hat{j}\right).
+$$
+The overall net force is therefore
+$$\vec{F}_{21} = K\frac{q^2}{a^2}\left(\left(4+\cos\left(45^{\circ}\right)\right)\hat{i}+\left(-2+\sin\left(45^{\circ}\right)\right)\hat{j}\right).
+$$
+
+\subsection{Charge Geometries}
+
+We can consider the four main basic charge geometries. These geometries are basic because they are very symmetrical. We note that these charge geometries can be either positive or negative in charge. We have already considered the point charge, so we shall now consider the three others:
+\begin{enumerate}
+	\item An infinitely long charged wire with length $L$ and charge $Q$ has a linear charge density of 
+	$$\lambda = \frac{Q}{L}.$$
+	\item An infinitely wide charged plane with area $A$ and charge $Q$ has a surface charge density of $$\sigma = \frac{Q}{A}.$$
+	\item A charged sphere with volume $V$ and charge $Q$ has a volume charge density of $$\rho = \frac{Q}{V}.$$
+\end{enumerate}
+
+\textbf{Electric dipole moment} for charges $+q$ and $-q$ separated by a distance of $s$ is given by $$\vec{p} = qs,$$
+in the direction from $-q$ to $+q$. Regarding charges, we note the principles of \textbf{charge quantization}, which states that 
+$$q = ne,$$
+where $n = \pm1, \pm2, \pm3, ...$ and $e = 1.60\times10^{-19}C$, and \textbf{charge conservation}, as in the case of annihilation and pair production given respectively as 
+$$e^- + e^+ \rightarrow \gamma +\gamma,$$
+$$\gamma \rightarrow e^- + e^+,$$
+where $\gamma$ is the gamma ray, $e^-$ is the electron, and $e^+$ is the positron. 
+
+\section{January 23, 2017}
+\subsection{Electric Fields}
+
+When a charge $A$ exerts a force on charge $B$ through empty space, where there is no contact and no apparent mechanism, we refer to this as an action-at-a-distance force. Gravity is an example of such a force, is the the electrostatic force. In our example, if $A$ suddenly moved to a new position, the force on $B$ varies to match this change. We consider the case where we only have one charge. This charge still affects the surrounding space. We quantify this by making use of the concept of an electric field. That is, charges create fields and the fields push the charges. A field is the ability to exert an electric force if a charge were present. The equation for an electric field is given as 
+$$\vec{E}(x,y,z) = \frac{\vec{F}(x,y,z)}{q}.$$
+For a point charge for instance, the force on $q'$ at a point in the field can be measured from the charge $q$. We note then that $$\vec{F}(x,y,z) = \frac{1}{4\pi\epsilon_0}\frac{qq'}{r^2}$$ in the direction away from $q'$. The electric field is therefore given as $$\vec{E}(x,y,z) = \frac{\vec{F}}{q'} = \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}$$ in the direction away from $q'$. We can also add up the field like vectors by using the superposition principle. We can therefore add up all the forces on a charge and divide out the charge. That is, 
+\begin{align*}
+\vec{E}(x,y,z) &= \frac{\vec{F}}{q}\\
+&= \frac{\vec{F_{1q}}}{q} + \frac{\vec{F_{2q}}}{q} +\frac{\vec{F_{3q}}}{q} +...\\
+&= \vec{E}_1 + \vec{E}_2 + \vec{E}_3+...\\
+&= \sum\vec{E}_i
+\end{align*}
+
+\textbf{Field lines} show the density of a field. They are lines with arrows showing the direction of the field. The density of the field lines gives an idea of how strong the field is. Field lines also never cross each other. Field lines are drawn outwards from positive charges, and inwards towards negative charges. 
+
+\subsection{Electric Field of a Dipole}
+
+
+
+
+\section{January 25, 2017}
+\subsection{Electric Field of Line of Charge}
+
+\subsection{Electric Field of Ring of Charge}
+The electric field due to a ring of charge with radius $R$ on a point $P$ located directly $z$ from the center of the ring so as to maintain symmetry with the ring is given as
+$$E_{ring} = \frac{1}{4\pi\epsilon_0}\frac{zQ}{\left(z^2+R^2\right)^{\frac{3}{2}}}.$$
+We note the limiting cases where $z$ approaches zero, and when $z>>R$. First we consider when $z=0$, the numerator becomes 0, so
+$$E_{ring}  \approx \frac{1}{4\pi\epsilon_0}\frac{zQ}{\left(z^2+R^2\right)^{\frac{3}{2}}} = 0.$$
+In the case when $z>>R$, $R$ becomes essentially $0$ compared to $z$, so we obtain
+$$E_{ring}  \approx \frac{1}{4\pi\epsilon_0}\frac{zQ}{\left(z^2+0^2\right)^{\frac{3}{2}}} = \frac{1}{4\pi\epsilon_0}\frac{Q}{z^2} .$$
+
+\section{January 26, 2017}
+\subsection{Electric Field of Charged Disk}
+Let the surface charge density of the disk of radius $R$ to be $\sigma = \frac{Q}{A}$, and let point $P$ be located directly $z$ from the center of the disk so as to maintain symmetry with the disk. The electric field is therefore given as 
+$$E_{disk} = \frac{\sigma}{2\epsilon_0}\left(1-\frac{z}{\sqrt{z^2+R^2}}\right).$$
+We note the limiting cases where $z$ approaches zero, and when $z >> R$. First we consider when $z=0$. Since we are positioned close to the disk, the area of the plane appears to extend indefinitely. Thus, the following is also the expression for the electric field of the plane, 
+$$E_{disk} \approx E_{plane} = \frac{\sigma}{2\epsilon_0}.$$
+Note that when $z>0$, the electric field for the plane is positive, whereas the field is negative when $z<0$. In the case when $z>>R$, $R$ becomes essentially $0$ compared to $z$, so we obtain
+$$E_{disk} \approx \frac{Q}{4\pi\epsilon_0z^2}.$$
+
+For disks with arbitrary widths composed of different densities, we evaluate 
+$$-\frac{\sigma z}{2\epsilon_0}\left(z^2+r^2\right)^{-1/2}\Big|_{R_1}^{R_2},$$
+where $R_1$ is inner radius and $R_2$ is outer radius. It follows that the electric field of a disk comes from this when $R_1=0$ and $R_2=R$. 
+
+\subsection{Electric Field Lines}
+
+We recall that field lines are less dense when the field is weaker, and field lines are more dense when the field is stronger. Electric field lines are continuous curves, while electric field vectors are tangent to the field lines. We also note that two electric field vectors cannot intersect, since the electric field at that point would be undefined. \textbf{Sources} of field lines are positive charges where field lines start, and \textbf{sinks} are negative charges where field lines end. We can consider this in the case of electric dipoles with two charges of equal magnitude and opposite sign.
+
+When electric force is the only force acting on a particle, we can relate $\vec{F}=m\vec{a}$ with $\vec{F} = q\vec{E}$. Thus, 
+$$\vec{a} = \frac{q\vec{E}}{m}.$$
+In a uniform field, $\vec{E}$ is the same everywhere.
+
+
+
+
+
+\section{January 27, 2017}
+\subsection{Electric Flux}
+\textbf{Field strengths} are measured in 
+$$\vec{E} = \frac{\vec{F}}{q},$$
+where $\vec{F}$ is measured in Newtons $N$ and $q$ is measured in Coulombs $C$ . If the field is coming out of each face of the box, then there must be a positive charge in the box. If the field is going into each face of the box, then there must be a negative charge in the box. A field that passes through the box implies that there is no et charge in the box. \textbf{Gauss' Law} is equivalent to Coulomb's Law. It presents an easier way to calculate electric fields in specific circumstances (especially situations with a high degree of symmetry). It also provides a better understanding of the properties of conductors in electrostatic equilibrium and is valid for moving charges since it is not limited to electrostatics. 
+
+\section{January 30, 2017}
+\subsection{Electric Flux Cont'd}
+
+
+
+A closed surface through which an electric field passes is called a \textbf{Gaussian surface}. This is an imaginary mathematical surface that is closed around a charge. The Gaussian surface is most useful when it matches the shape of the field. Gauss' law relates the electric field at points on a closed Gaussian surface to the net charge enclosed by that surface. The \textbf{area vector} of a surface indicates the vector perpendicular to the surface, and always points outside. \textbf{Electric flux} $\Phi_e$ is defined by the amount of electric field going through a surface and the number of field lines coming through a surface. It is given by 
+$$\Phi_e = E\cdot A = EA\cos(\theta).$$
+where $E$ specifies the electric field, $A$ is the area of the surface, and $\theta$ is the angle between $E$ and $A$. This is the expression for a flat surface and a uniform field. If the field lines are going towards the surface, it is negative. If the field lines are extending from the surface, it is positive. We note that the electric flux through a parallel surface is $0$, whereas the electric flux through a perpendicular surface is the entire magnitude of $EA$. 
+
+The \textbf{total flux} through a closed surface under a uniform field can be obtained by integrating the dot product over the full surface 
+$$\Phi = \int\vec{E} \cdot \mathrm d \vec{A}.$$
+The \textbf{net flux} through a closed surface (which is used in Gauss' law) is given as 
+$$\Phi  = \oint \vec{E} \cdot \mathrm d \vec{A}.$$
+To determine the flux through a closed surface, we first divide the closed surface into pieces that are tangent to the electric field, perpendicular to the electric field, or with a certain specific angle to the field. We then evaluate the surface integral. 
+
+For instance, suppose we have a cylinder surface. We can divide it into sections $a$, $b$, and $c$, where $a$ is the area of the top circle, $b$ is the area of the side of the cylinder, and $c$ is the area of the bottom circle. Thus, we obtain 
+
+\begin{align*}
+\Phi_e &= \oint_a \vec{E} \cdot \mathrm d \vec{A} + \oint_b\vec{E} \cdot \mathrm d\vec{A} + \oint_c\vec{E} \cdot \mathrm d \vec{A} \\
+&= 
+\end{align*}
+
+\section{February 1, 2017}
+\subsection{Gauss' Law}
+
+\textbf{Gauss' law} relates the net flux $\Phi$ of an electric field through a closed surface (a Gaussian surface) to the net charge $q$ that is enclosed by that surface. That is,
+$$\epsilon_0\Phi = q,$$
+$$\epsilon_0\oint \vec{E} \cdot \mathrm d \vec{A} = q.$$
+Therefore, charge outside of the surface is not considered. We note that this expression can be rearranged to find that 
+$$\oint \vec{E} \cdot \mathrm d \vec{A} = \frac{q}{\epsilon_0}.$$
+We consider the electric flux over a proton, electron, and then a proton along with an electron. We apply the equation directly above to find that $\frac{+q}{\epsilon_0}$, $\frac{-q}{\epsilon_0}$, and $\frac{0}{\epsilon_0}.$ The last surface encloses no net charge, since the enclosed positive and negative charges have equal magnitudes. Gauss' lLw requires that the net flux of the electric field through this surface be zero. Gauss' Law us applied to closed surfaces, and the electric flux is independent of surface shape and radius. 
+
+Applying Gauss' Law to a point charge, we obtain the expression of an electric field for a point charge. Thus, we note that Gauss' Law provides equivalent solutions to Coulomb's Law. Furthermore, charges outside the surface do not affect the electric flux, since there is no net flow into our out of the surface due to the external charge. Therefore, the net flux through a Gaussian surface that does not contain any charge is zero. For multiple charges, the electric flux is given as
+$$\Phi = \left(\frac{q_1}{\epsilon_0} + \frac{q_2}{\epsilon_0}+...+\frac{q_n}{\epsilon_0}\right),$$
+for charges $q_1, q_2, ...,q_n$ enclosed by the surface. 
+
+\section{February 2, 2017}
+\subsection{Electric Field in Shell of Charge}
+
+We shall use Gauss' law to compute the electric field inside and outside a spherical shell of charge. By using a symmetrical argument, we note that the electric field must point in the radial direction only. Furthermore, the electric field must be the same magnitude at a constant radius. We note that inside the sphere, there is no enclosed charge, so 
+$$E_{shell}=0$$
+for $r<R$, where $r$ is the imaginary radius of the sphere at point $P$ and $R$ is the radius of the shell of charge. For any radius outside the shell of charge, we have an enclosed charge of $Q$. Since the surface area of a sphere is $4\pi r^2$, we recall that $\oint\vec{E} \cdot \mathrm d \vec{A} = EA = \frac{q}{\epsilon_0}$, so our expression is 
+$$E_{shell} = \frac{Q}{4\pi\epsilon_0r^2}$$
+for $r>R$.
+\begin{remark}
+When we want to determine the electric field at a certain point, we can consider the sphere with that point lying on the surface of the sphere. We then consider the charges enclosed by that imaginary sphere. 
+\end{remark}
+
+\subsection{Electric Field in Shell of Charge}
+
+We note that the electric field outside a sphere of charge is the same as the electric field outside of a shell of charge $Q$. That is, 
+$$E_{sphere} = \frac{Q}{4\pi\epsilon_0r^2}$$
+for $r>R$. The field inside the sphere of charge can be determined by considering the volume charge density $$\rho = \frac{Q}{\frac{4}{3}\pi R^3},$$
+where $Q$ is the total charge of the sphere and $R$ is the radius of the sphere of charge. Thus, since the charge enclosed is $\rho*V$, we note that $V = \frac{4}{3}\pi r^3$, where $r$ is the radius of the imaginary sphere are point $P$ inside of the sphere. Therefore, the enclosed charge is 
+$$q = \frac{Qr^3}{R^3}.$$ Once again, $E = \frac{q}{A\epsilon_0}$ where $A = 4\pi r^2$. Thus, the electric field inside a sphere of charge is 
+$$E_{sphere} = Q\frac{r}{4\pi \epsilon_0R^3}$$
+for $r<R$.
+
+\section{February 3, 2017}
+\subsection{Gauss' Law Cont'd}
+
+\begin{remark}
+Different surfaces may be more suitable when the direction of the enclosed charge is not directed radially outwards. For instance, the flux could be more easily calculated using a cubic gaussian surface when presented a plane of charge. 
+\end{remark}
+
+
+
+
+\section{February 6, 2016}
+\subsection{Charged Isolated Conductor}
+
+If an excess charge is placed on an isolated conductor, that amount of charge will move entirely to the surface of the conductor. None of the excess charge will be found within the body of the conductor. That is, if we charge a conductor, the excess charges spread out on the exterior surface of the conductor, with the electric field at the surface perpendicular to the surface. A \textbf{conductor} is a material in which the charges are free to move. This means that
+\begin{enumerate}
+\item There is zero net charge inside a conductor ($Q_{net} = 0$). If there are two or more like charges inside a conductor, they will repel and push each other far away (to the surface).
+\item There is zero electric field inside a conductor ($E_{in} = 0$). If there is a non-zero field, the $F=Eq$ implies that there is a net force which means charges would move until the force on them is zero, so we have static equilibrium. 
+\end{enumerate}
+
+Since the electric field inside a conductor is zero, this immediately implies that conductors are electrically neutral in their interiors. This also means that the surface of a hollow cavity inside a conductor cannot carry any excess charge. All excess charge must reside on the outside surface only. The electric field over the conducting surface is given as 
+$$E = \frac{\sigma}{\epsilon_0}.$$
+
+To summarize, we note that the electric field inside the conductor is zero. All excess charge is distributed to the surface, so that the conductor is neutral on the inside. In the event that there is a void completely enclosed by the conductor, the electric field inside the enclosed void is zero. Furthermore, the electric field that is distributed to the surface is perpendicular to the surface (and parallel to the area vector) with a magnitude of $E = \sigma / \epsilon_0$. This means that charges are closer together and the electric field is strongest at a pointed end of a surface. That is, the charge density is greatest where the radius of curvature is smallest. 
+
+\begin{remark}
+We note however, that the electric field is not dependent on the distance.
+\end{remark}
+
+\section{February 8, 2017}
+\subsection{Electric Field of Charged Wire and Plane}
+
+We note that for a long charged wire with a charge density of $\lambda$ of length $L$ and radius $r$, the electric field of the wire is given by 
+$$E_{wire} = \frac{\lambda}{2\pi\epsilon_0r}.$$
+
+
+
+\section{February 9, 2017}
+\subsection{Examples}
+
+\begin{example}
+Two very thin infinite sheets are uniformly charged with surface charge densities of $-2q$ and $+5q$. What is the magnitude and direction of the electric field between the two sheets?
+\end{example}
+
+We note that the electric field would travel from right to left, from the positive charge to the negative charge. We use the superposition principle to obtain a magnitude of $+7q$. 
+
+
+\section{February 15, 2017}
+\subsection{Electric Potential}
+
+The potential energy of two point charges $q$ and $q'$ separated by a distance of $r$ is given as
+$$U_{q'+q} = \frac{1}{4\pi\epsilon_0}\frac{qq'}{r}+U_0.$$
+However, $U_0$ is generally set to $0$. The potential energy of two charges separated by an infinite distance is equal to zero. Since potential energy is a physical property that exists because of the force between two charges, we can also define the notion of potential energy as a result of the electric field. The potential of one charge $q$ is therefore
+$$V_{point} = \frac{U_{q'+q} }{q'} = \frac{1}{4\pi\epsilon_0}\frac{q}{r}.$$
+The units for electric potential are volts $V$, defined as 
+$V = J/C$. Note that while electric force and electric field are vector quantities, potential energy and electric potential are scalar quantities. We recall that work we can related to force times the distance it is exerted. Thus, 
+$$W = F\Delta h = qE\Delta h.$$
+Therefore, between plates with $U_b > U_a$, the work exerted would be 
+$$U_b^E - U_a^E > 0,$$
+while the work done is 
+$$-\left(U_b^E-U_a^E\right).$$
+
+Superposition can be applied to potential energy when we are dealing with multiple charges. In general, the total potential energy is the sum of the pairwise potential energies of all charges present. To evaluate the total potential energy, we calculate $U$ between each pair, then sum the intermediate results. Thus, for potential energies of $U_{12}$, $U_{23}$, and $U_13$, for charges $q_1$, $q_2$, and $q_3$, then the total potential energy is 
+$$U_{total} = U_{12} + U_{23} + U_{13}.$$
+
+Given some source charges and a point $P$, we can place a charge $q$ at point $P$. This charge $q$ then interacts with the source charges. The interaction energy is the potential energy of $q$ and the source charges. This interaction happens because the source charges create a potential for interaction everywhere, including at point $P$. This potential for interaction is a property of space, since charge $q$ does not need to be there. We call this potential for interaction the electric potential $V$. 
+
+
+
+\section{February 16, 2017}
+\subsection{Electric Potential Cont'd}
+
+Electric potential $V$ at a point $P$ in the electric field of a charged object is 
+$$V = -\frac{W_{\infty}}{q_0} = \frac{U}{q_0},$$
+where $W_{\infty}$ is the work that would be done by the electric force on a positive test charge $1_0$ were it brought from an infinite distance to $P$, and $U$ is the electric potential energy that would then be stored in the test charge-object system. Thus, the electric potential $U$ of the particle-object system is $U = qV.$
+
+The following are some important properties:
+\begin{enumerate}
+	\item \textbf{Change in Electric Potential}: If the particle moves through a potential difference of $\Delta V$, then the change in the electric potential energy is 
+	$$\Delta U = q\Delta V = q(V_f-V_i).$$
+	\item \textbf{Work by the Field}: The work $W$ done by the electric force as the particle moves from $i$ to $f$ is $$W = -\Delta U = -q\Delta V  = -q((V_f - V_i).$$
+	\item \textbf{Conservation of Energy}: If a particle moves through a change $\Delta V$ in electric potential without an applied force acting on it, applying the conservation of mechanical energy gives the change in kinetic energy as $$\Delta K = -q\Delta V = -q(F_f - V_i).$$
+	\item \textbf{Work by an Applied Force}: If some force in addition to the electric force acts on the particle, we account for that work 
+	$$\Delta K = -\Delta U + W_{applied} = -q\Delta V + W_{applied}.$$
+\end{enumerate}
+
+Electric potential is advantageous to calculate, since it is a scalar quantity. Since there is no direction associated with it, we can simply find the net potential by summing the individual potentials, so 
+$$V = V_1 + V_2 + ...+V_n.$$
+
+\textbf{Equipotential lines} are imaginary liens that indicate equal potential. Therefore, if we move along the equipotential surface, then by definition, $\Delta V = 0$. This implies that $\Delta V = -E \Delta r =0 $, where $E$ is the perpendicular equipotential surface. For instance, the potential of a uniform spherical charge is $V(r) = kQ/r$. Thus, for each $r$, $V(r)$ is constant over any sphere concentric with the charged sphere. 
+
+The surface of a conductor is an equipotential. If there were a potential difference across the surface of the conductor, then the freely moving charges would move around until the potential is constant. This means that the electric field must meet a conducting surface at right angles, since any tangential component would imply a tangential force on the free charges.
+
+\section{February 27, 2017}
+\subsection{Potential Gradient}
+
+We note that $E$ is always perpendicular to the equipotential lines, so $E$ is always perpendicular to $V$. That is,
+$$\vec{E} = \vec{\nabla}V = -\frac{\partial V}{\partial x}\hat{i}   -\frac{\partial V}{\partial y}\hat{j}-\frac{\partial V}{\partial z}\hat{k}.$$
+In 3 dimensions, we must take 3 derivatives and add them vectorially. Alternatively, the potential is found from the electric field integrated along any path connecting points $A$ and $B$,
+$$V_{AB} = \int_A^B\vec{E} \cdot \mathrm d s.$$
+
+On equipotential surfaces, adjacent points with the same electric potential lie on an equipotential surface. No net work $W$ is done on a charged particle by an electric field when a particle moves on the same equipotential surface. Similarly, equal work is done along paths between the same surfaces, and no work is done along paths that return to the same surface. For a uniform electric field, the work done on a particle by a force can be used to determine 
+$$\Delta V = - E \Delta x.$$
+
+
+\subsection{Electric Potential of a Dipole}Given charges $+q$ and $-q$ with distances from point $P$ of $r_+$ and $r_-$ respectively, the expression of the electric potential of a dipole is given as 
+$$V = \frac{q}{4 \pi \epsilon_0}\frac{r_--r_+}{r_-r_+}.$$
+However, for $r >> d$ where $d$ is the distance between the dipoles, we can rewrite $r_-r_+ \approx r^2$ and $r_--r_+ \approx d \cos(\theta)$. Thus,
+$$V_{dipole}= \frac{q}{4 \pi \epsilon_0}\frac{d\cos(\theta)}{r^2} = \frac{1}{4\pi\epsilon_0}\frac{\rho\cos(\theta)}{r^2},$$
+where $\rho$ is the dipole moment and $\theta$ is the angle from the venter of the dipole to the point $P$.
+
+
+\section{March 1, 2017}
+\subsection{Electric Potential of a Line of Charge}
+For a thin nonconducting rod of length $L$ with a uniform positive charge with charge density $\lambda$, we can find the electric potential $V$ due to the rod at point $P$, located a perpendicular distance $d$ from the left end of the rod. We note that $$\mathrm d V = \frac{1}{4\pi\epsilon_0}\frac{\mathrm d q}{r}.$$
+Where the integral of $\mathrm d V$ is equal to the potential. With $\mathrm d q = \lambda \mathrm d x$. Thus, we find that 
+\begin{align*}
+	V_{line} &= \frac{\lambda}{4\pi\epsilon_0}\int_0^L\frac{\mathrm d x}{\left(x^2+d^2\right)^{1/2}}\\
+	&=  \frac{\lambda}{4\pi\epsilon_0}\ln\left(\frac{L + \left(L^2+d^2\right)^{1/2}}{d}\right)
+\end{align*}
+
+\subsection{Electric Potential of a Ring Along its Axis and a Charged Disk}
+
+Given a ring of radius $R$ with total charge $Q$, the potential at a point located a distance of $z$ from the center axis is given as 
+$$V_{ring} = \frac{1}{4\pi\epsilon_0}\frac{Q}{\sqrt{R^2+z^2}}.$$
+The potential of a charged disk can be found by integrating the differential element consisting of a flat ring of radius $R$ with radial with $\mathrm d R$. Doing this, we find that the potential at a point located along the axis of a charged disk is given by 
+$$V_{disk}=\frac{\sigma}{2\epsilon_0}\left(\sqrt{z^2+R^2}-z\right),$$
+where $\sigma$ is the surface charge density, $z$ is the vertical distance of the point $P$ from the center of the disk, and $R$ is the radius of the disk. 
+
+\subsection{Electric Potential of a Charged Isolated Conductor}
+
+The surface of a conductor is an equipotential. If there was a potential difference across the surface of a conductor, the freely moving charges would more around until the potential is constant. This means that the electric field lines must always meet a conducting surface at right angles since any tangential component would imply a tangential force on the free charges. 
+
+\section{March 6, 2017}
+\subsection{Capacitance}
+
+One of the goals of physics is to provide basic science for practical devices designed by engineers. A \textbf{capacitor} is any two electrodes separated by some distance. Regardless of the geometry, we call these electrodes ``plates". A capacitor consists of two isolated conductors (the plates) with charges $+q$ and $-q$. Its \textbf{capacitance} $C$ is defined as 
+$$q = CV,$$
+where $V$ is the potential difference between plates. In general, for equal but opposite charges on the plates, this arbitrary set of electrodes creates an electric field. The equipotential lines are rings around the charges, with a straight line along the center between the charges. The potential changes from $V_+$ on the positive plate to $V_-$ on the negative plate. 
+
+We first consider a \textbf{parallel plate capacitor}. It is made up of two plates of an area $A$ separated by a distance $d$. The charges on the plate surfaces facing each other have the same magnitude $q$, but are of the opposite sign. The electric field due to the charged plates is uniform in the central region between the plates. The field is not uniform at the edges of the plates, as indicated by the ``fringing" of the field lines. The source charges on the capacitor plates create a uniform electric field between the plates. Suppose that each plate has a surface charge density of $\pm \sigma$. The electric field from positive to negative is therefore 
+$$\vec{E} = \frac{\sigma}{\epsilon_0}.$$ The electric potential inside a charged capacitor increases linearly from the negative to the positive plate. The potential difference between two points such that the distance between them is the same relative to the negative and positive plates has the same potential difference. We can define $V=0$ to be anywhere we want. Our choice of $V=0$ does not affect any potential differences or the electric field. 
+
+When a circuit with a battery, an open circuit, and an uncharged capacitor is completed by closing the switch, conduction electrons shift, leaving the capacitor plates with opposite charges. The battery maintains the potential difference $V$ between its terminals. When the plates are uncharged, the potential difference between them is zero. As the plates become oppositely charged, that potential difference increases until it equals the potential difference $V$ between the terminals of the battery.
+
+\subsection{Calculating Capacitance}
+
+To calculate the electric field and potential difference, we perform the following step:
+\begin{enumerate}
+	\item To relate the electric field $E$ between the plates of a capacitor to the charge $q$ on either plate we use Gauss' Law $$\epsilon_0\oint\vec{E}\cdot \mathrm d \vec{A} = q.$$
+	\item The potential difference between the plates of a capacitor are related to the field $E$ by
+	$$V_f-V_i = -\int_i^f\vec{E} \cdot \mathrm d \vec{s}.$$
+	Letting $V$ represent the difference $V_f-V_i$, we can recast the above equation as 
+	$$V = \int_-^+E\mathrm d s.$$
+	\item Find capacitance from $$q = CV.$$
+\end{enumerate}
+
+For very large plates that are very close together, $E$ is constant throughout the region between the plates. The Gaussian surface encloses just the charge $q$ on the positive plate. The path of integration travels from the negative plate to the positive plate in a perpendicular manner. Thus, applying Gauss' law, we have 
+$$q = \epsilon_0EA.$$ Finding the potential, we have 
+$$V = \int_-^+E\mathrm d s = E\int_0^d\mathrm d s = Ed,$$
+where $d$ is the distance from the negative plate to the positive plate. Thus, relating $q$ and $V$ for the capacitance of parallel-plate capacitors, we obtain
+$$ C_{plate} = \frac{\epsilon_0A}{d}.$$
+
+We now consider a \textbf{cylindrical capacitor} of length $L$ formed by two coaxial cylinders of radii $a$ and $b$. When $L >> b$, we neglect fringing of the electric field that occurs near the ends of the cylinders. Each plate contains a charge of magnitude $q$. For a cylindrical capacitor, Gauss' law states that 
+$$q = \epsilon_0EA = \epsilon_0E(2\pi rL),$$
+where $r$ is the radius of the Gaussian surface containing the positive inner charge. The potential is given as 
+$$V = \int_-^+E\mathrm d s = -\frac{q}{2\pi\epsilon_0L}\int_b^a\frac{\mathrm d r}{r} = \frac{q}{2\pi\epsilon_0L}\ln\left(\frac{b}{a}\right).$$
+The capacitance is therefore 
+$$C_{cylinder} = \frac{q}{V} = 2\pi\epsilon_0\frac{L}{\ln(b/a)}.$$
+
+For a spherical capacitor, the capacitance is 
+$$C_{sphere} = 4\pi\epsilon_0\frac{ab}{b-a},$$
+where $b$ is the radius of the outer shell, ad $a$ is the radius of the inner sphere of charge. The capacitance of an isolated sphere of radius $R$ is 
+$$C_{sphere} = 4\pi\epsilon_0R.$$
+
+\section{March 8, 2017}
+\subsection{Calculating Capacitance Cont'd}
+In general, we have the following relationships:
+\begin{enumerate}
+	\item General Relationship $$Q = C\Delta V_C.$$
+	\item Parallel Plate Capacitor $$Q = \left(\frac{\epsilon_0A}{d}\right)\Delta V_C.$$
+	\item Spherical Capacitor $$Q = \left(\frac{4\pi\epsilon_0r_br_a}{r_b-r_a}\right)\Delta V_C.$$
+	\item Isolated Sphere $$Q = (4\pi\epsilon_0R)\Delta V_C.$$
+	\item Cylindrical Capacitor $$Q = \left(\frac{2\pi\epsilon_0L}{\ln\left(\frac{r_b}{r_a}\right)}\right)\Delta V_C.$$
+\end{enumerate}
+
+\begin{remark}
+We note that capacitance is independent of charge or potential. Potential is found from the negative plate to the positive plate. 
+\end{remark}
+
+\subsection{Capacitors in Parallel and Series}
+
+When a potential difference $V$ is applied across several capacitors connected in series, the capacitors have identical charge $q$. The sum of the potential differences across all the capacitors is equal to the applied potential difference $V$. For voltages
+$V_1 = \frac{q}{C_1}$, $V_2 = \frac{q}{C_2}$, and $V_3 = \frac{q}{C_3}$,
+the total potential difference is 
+$$V = V_1 + V_2 + V_3 = q\left(\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\right).
+$$ The equivalent capacitance is then $$C_{eq} = \frac{q}{V} = \left(\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\right)^{-1},$$
+or 
+$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}.$$
+Capacitors that are connected in series can be replaced with an equivalent capacitor that has the same charge $a$ and the same total potential difference $V$ as the actual series capacitors. 
+
+When a potential difference $V$ is applied across several capacitors connected in parallel, that potential difference $V$ is applied across each capacitor. The total charge $q$ stored on the capacitors is the sum of the charges stored on all the capacitors. For charges $q_ 1 = C_1V$, $q_2 = C_2V$, and $q_3 = C_3V$. The total charges on the parallel combinations is therefore
+$$q = q_1+q_2+q_3 = (C_1+C_2+C_3)V.$$
+The equivalent capacitance, with the same total charge $q$ and applied potential difference $V$ as the combination is therefore 
+$$C_{eq} = \frac{q}{V} = C_1+C_2+C_3.$$
+Capacitors that are connected in parallel can be replaced with an equivalent capacitor that has the same total charge $q$ and the same potential difference $V$ as the actual capacitors. 
+
+\subsection{Energy Stored in an Electric Field}
+
+We want to calculate the potential energy stored in the capacitor. To move a small amount of charge $\mathrm d q$ from the negative plate to the positive plate, it moves through a potential difference of $\Delta V$. Its potential energy increases by a certain amount. Thus, 
+$$\mathrm d U = \mathrm d q\Delta V_C,$$
+where $\Delta V_C = \frac{q}{C}.$
+Therefore,
+$$U = \frac{1}{C} \int_0^Qq\mathrm d q = \frac{Q^2}{2C}.$$
+This expression presents energy storage in terms of the charge on the plates. Energy storage in terms of the voltage across the plates is given by $$U = \frac{CV^2}{2}$$
+since we note that $Q=CV$. The potential energy of a charged capacitor may be viewed as being stored in the electric field between its plates. \textbf{Energy density} refers to the potential energy per unit volume between the plates. For parallel plate capacitors, this is 
+$$u = \frac{U}{Ad} = \frac{1}{2}\epsilon_0\left(\frac{V}{d}\right)^2 = \frac{1}{2}\epsilon_0E^2.$$
+
+
+\section{March 9, 2017}
+\subsection{Capacitors with a Dielectric}
+
+If the space between the plates of a capacitor is completely filled with a dielectric material, the capacitance $C$ in a vacuum (or effectively, in air) is multiplied by the material's dielectric constant, which is a number greater than $1$. Th is is given as 
+$$C  = \kappa C_{air},$$
+where $\kappa$ is the dielectric constant. If the potential difference between the plates of a capacitor is maintained, as through the presence of a battery $B$, then the effect of a dielectric is to increase the charge on the plates,
+$$q = CV = \kappa C_{air}V = \kappa q_{air}.$$
+If the charge on the capacitor plats is maintained, as through isolating the capacitor, then the effect of the dielectric is to reduce the potential difference between the plates, 
+$$V = \frac{q}{C} = \frac{q}{\kappa C_{air}} = \frac{V_{air}}{\kappa}.$$ A potentiometer is a device used to measure potential difference. This can be used to measure the potential difference between the plates. A capacitor cannot discharge through a potentiometer. 
+
+In a region completely filled by a dielectric material of dielectric constant $\kappa$, all electrostatic equations containing the permittivity constant $\epsilon_0$ are to be modified by replacing $\epsilon_0$ with $\kappa\epsilon_0$. For instance, the magnitude of the electric field produced by a point charge inside a dielectric is 
+$$E = \frac{1}{4\pi\kappa\epsilon_0}\frac{q}{r^2}.
+$$ The magnitude of the electric field outside of an isolated conductor immersed in a dielectric is 
+$$E = \frac{\sigma}{\kappa \epsilon_0}.$$
+
+\subsection{Atomic View of Dielectrics}
+
+We now consider what happens at the atomic scale when we put a dielectric in an electric field. Molecules with a permanent electric dipole moment show their random orientation in the absence of an external electric field. When an electric field is applied, it produces partial alignment of the dipoles. Thermal agitation prevents the complete alignment of molecules in \textbf{polar dielectrics}. On the other hand, the initial electric field inside a \textbf{non-polar dielectric} slab is zero. The applied field proceeds to align the atomic dipole moments. To summarize, the result of the inclusion of a dielectric is to increase $C$, decrease $V$, and decrease $E$. The field of the aligned atoms is opposite to the applied field. The effect of both polar and non-polar dielectrics is to weaken any applied field within them. We can then find force using 
+$$F_x = -\frac{\mathrm d U}{\mathrm d x},$$
+since the fringe electric field at the edges pull the dielectric into the gap. 
+
+
+
+
+
+\section{March 13, 2017}
+\subsection{Electric Current}
+
+Since there are moving charges in electric circuits, there is no electrostatic equilibrium. Conductors are therefore allowed to have non-zero electric fields inside (this is what causes the charges to move). We note that the total amount of charge flowing past a surface at time $\Delta t$ is the same as the total amount of charge flowing past another surface in the same amount of time $\Delta t$. The total amount of charge flowing through any surface at time $\Delta t$ must be constant, since otherwise charges would begin to accumulate. \textbf{Current} in a wire is constant, and given as 
+$$I = \frac{\mathrm d q}{\mathrm d t}.$$
+
+\subsection{Current Density}
+The current in a wire is the flux of charge carriers (electrons) through a surface. Current is also expressed as 
+$$I = \oint_S\vec{J} \cdot \mathrm d \vec{A},$$
+where $\vec{J}$ is the current density. The current $I$ is then interpreted as the number of charges passing through a surface in a specified direction. The vector $\vec{J}$ contains information on the density of conduction electrons in the conductor, as well as the net velocity of these conduction electrons. The current density $J$ is in the same direction as the velocity of the positive moving charges and opposite direction if the moving charges are negative. Conduction electrons are actually moving in the direction opposite to the positive charge, but the conventional current is taken with respect to the positive charges. Note that while the net movement of electrons is in the direction opposite to the electric field, there are slight deviations unless the electric field is strong, or the movement occurs near absolute zero. Thus, current is expressed as 
+$$i = \frac{q}{t} = JA.$$
+If we let $n_e$ be the volume density of conduction electrons, $q=n_e(AL)e$ be the amount of charge contained in a length $L$ of the wire, and $t=L/v_d$ be the time it takes for each charge to travel a distance of $L$, then current is 
+$$i = \frac{q}{t} = \frac{n_e(AL)e}{L/v_d} = n_eAev_d.$$
+This implies that 
+$$\vec{J} = n_ee\vec{v_d}.$$
+
+$\vec{J}$ is a vector, and is always in the direction that ``streamlines" the electrons at any given location in the wire, while the current $I$ is a scalar since it just has a magnitude. The direction is the average displacement of all the charges in the wire, and thus always points in the general direction of the wire. 
+
+\subsection{Resistance and Resistivity}
+
+\textbf{Resistance} is a property of conductors that are not ideal. Electrons have frequent collisions with atomic nuclei. When a voltage difference is created across the conductor, this accelerates the electrons, making their collisions more energetic. This gets dissipated as heat inside the metal. A \textbf{resistor} is any circuit element that dissipates energy. Light bulbs are the classic example, but there are other examples. The amount of energy that is dissipated by a given resistor is given by its resistance $R$. We quantify resistance as 
+$$\Delta V = IR,$$
+where $\Delta V$ is the potential difference across a wire of length $L$, where $I$ is the current flowing in the direction $\vec{j}$ along the wire with cross sectional area $A$. 
+
+Resistance is a property of an object, while \textbf{resistivity} is a property of a material. Instead of the resistance $R$ of an object, we may deal with the resistivity $\rho$ of the material,
+$$\rho = \frac{E}{J}.$$
+The reciprocal of resistivity is the \textbf{conductivity} $\sigma$ of the material, 
+$$\sigma = \frac{1}{\rho}.$$
+The resistance $R$ of a conducting wire of length $L$ with a uniform cross sectional area $A$ is given as 
+$$R = \rho\frac{L}{A}.$$
+Current is driven by a potential difference. The resistivity $\rho$ for most materials change with temperature
+$$\rho - \rho_0 = \rho_0\alpha(T-T_0),$$
+where $T_0$ is the reference temperature, $\rho_0$ is the resistivity at $T_0$, and $\alpha$ is the temperature coefficient of resistivity of the material. 
+
+\subsection{Circuits}
+
+When a voltage difference of $\Delta V$ is applied across a resistor $R$, the voltage difference causes the electrons to flow through the resistor. The flow of electrons is the electrons is the electric current. These quantities are related by \textbf{Ohm's Law}:
+$$\Delta V = IR.$$
+
+In this class, we will usually treat wires as ideal so that $\Delta V = 0$ across any wire segment even if there is no current flowing. A battery is any \textbf{source} that supplies a voltage difference in an electric circuit. The voltage is either specified by $V$, or by the symbol $\epsilon$ which stands for the \textbf{electromotive force} (EMF). Real batteries also have a resistance to them. Recall that in current convention, the flow of positive charge is opposite to the flow of negative charge. The simplest circuit has an ideal battery, ideal wires, and a single resistor. \textbf{Kirchoff's Loop Rule} states that the sum of the voltage differences around a closed loop in a circuit must be zero through the conservation of energy,
+$$\Delta V_{AB} + \Delta V_{BC} + \Delta V_{CD} + \Delta V_{DA} =0.$$ The voltage across a resistor is negative if one is going around the loop in the direction of the flow of current. We consider that current flows from the negative terminal to the positive terminal. The voltage across a resistor is positive if one is going around the loop in the direction opposite to the direction of the flow or current. The voltage across a battery is negative going from the positive to negative. Thus, substituting $\epsilon$ for $V$, we have Ohm's Law expressed as 
+$$\epsilon-IR = 0.$$
+
+\subsection{Kirchhoff's Loop Rule}
+In this class, we make use of the following convention. When a current flows across a resistor from $+$ to $-$, then it travels from a higher to lower $V$, so $\Delta V = -IR$. When the current is flowing across the resistor from $-$ to $+$ from a lower to higher potential, then $\Delta V = IR$. Similarly, when a current flows from $+$ to $-$ across a voltage source, $\Delta V = -\epsilon$, and when current flows from $+$ to $-$ across a capacitor from higher to lower $V$, we have $\Delta V = -\frac{Q}{C}$. 
+
+We recall that the current into a junction must equal the current out of the junction, since charge has to be conserved. That is, 
+$$I = I_1+I_2.$$
+Resistors in series have the same current running through them, while those in parallel have the same voltage across them. Thus, the equivalent resistance for resistors in series and parallel are given respectively,
+$$R_{eq} = R_1 + R_2 + ... + R_N,$$
+$$R_{eq} = \left(\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_N}\right)^{-1}.$$
+
+
+
+\section{March 15, 2017}
+
+\subsection{Ohmic and Non-Ohmic Devices}
+Materials with \textbf{isotropic} electrical properties produce a linear relationship when current $i$ is plotted against the potential difference $V$. Materials with \textbf{anisotropic} electrical properties do not follow this pattern forming a linear relationship. In a microscopic view of Ohm's law (resistivity), electrons bounce around inside the metal at very high speeds on the order of $0.05c$, where $c$ is the speed of light. When an electric field is applied in the conductor, there is a net force on the electrons leading to ``drift speed",
+$$v_d = \frac{J}{ne}.$$
+According to the microscopic view of resistivity, 
+$$\rho = \frac{m}{ne^2\tau},$$
+$$\rho - \rho_0 = \rho_0\alpha(T-T_0).$$
+Thus, temperature dependent resistance can be modeled by 
+$$R - R_0 = R_0\left(\frac{2}{3}\alpha\right)(T-T_0).$$
+
+\subsection{Power in Circuits}
+We recall that power is the rate at which work is done, so 
+$$P = \frac{W}{\Delta t}.$$
+A battery with voltage $\Delta V$ raises the potential energy of a single charge $q$ by an mount $q\Delta V$. This is the work done by the battery. For $N$ charges, we have 
+$$P = \frac{NqV}{\Delta t} = \left(\frac{Nq}{\Delta t}\right)V = IV.$$
+Thus, the power in circuits can be calculated with the following formulas:
+$$P = IV = RI^2 = \frac{V^2}{R}.$$
+
+\subsection{Grounding}
+A ground is represented by three horizontal lines connected to the conductor. It represents the place in the circuit where $V=0$. In electrical outlets, the wide slot is neutral, the narrow slot is hot/live, and the third slot on the bottom is the ground. 
+
+\subsection{Ammeter and Voltmeter}
+
+A voltmeter is connected in parallel. We consider the resistance of the voltmeter to be infinite. An ammeter on the other hand, is connected in series. We consider the resistance of the ammeter to be near 0;. 
+
+\subsection{Non-Ideal Batteries}
+Every voltage source  has some internal resistance to it. Usually, this can be ignored. When it cannot be ignored, the internal resistance simply acts as a resistor in series with the rest of the circuit. Thus, for a source with a voltage $\epsilon$, the expression becomes 
+$$\epsilon - Ir - IR = 0.$$
+We note the following results:
+$$I = \frac{\epsilon}{r+R},$$
+$$P_{\epsilon} = I\epsilon = \frac{\epsilon^2}{r+R},$$
+$$P_R = I^2R = \frac{\epsilon^2R}{(r+R)^2}.$$
+
+
+\subsection{RC Circuits (Resistors and Capacitors)}
+So far, we have only considered \textbf{steady and continuous currents}. Many important circuit applications use a combination of capacitors and resistors to produce \textbf{time dependent currents}. Examples include wireless signals in a cordless phone, remote control, etc. A simple RC circuit consists of a voltage source connected to a resistor, a switch, and a capacitor. When the switch is open, no current can flow, so that charge and voltage on the capacitor is 0. When the switch is closed for a long time, the charge on the capacitor becomes $Q = CV$. The voltage across the capacitor is $V$ and no current flows in the circuit. Immediately after the switch is closed or opened, we have time dependent currents. 
+\begin{enumerate}
+	\item \textbf{Charging a Capacitor}: Initially, the capacitor is uncharged. The resistance $R$ in the circuit could be the internal resistance of the battery, the resistance of connecting wires, an actual resistance in the circuit, or a combination of the above. When the switch is suddenly closed at $t=0$, a current flows through the capacitor. If we plotted current against time, we would note that the current starts off at a maximum, then reaches 0 after a long duration of time, 
+	$$i = i_0e^{-\frac{t}{RC}}.$$
+	Furthermore, if we plotted charge against time, we will notice that charge starts off at $0$ and rises until is reaches a peak where the slope is $0$,
+	$$q = \epsilon C(1-e^{-\frac{t}{RC}}) = Q_f(1-e^{-\frac{t}{RC}}).$$
+	\item \textbf{Discharging a Capacitor}: The switch is connected to the capacitor for a long time until $t=0$. The switch is then suddenly flipped at $t=0$ so that the capacitor is not acting as the voltage source. That is, the capacitor was charged up to voltage $V$, and then discharged. Once the switch is flipped to the right, we have 
+	$$\frac{q(t)}{C} - iR = 0 \implies \frac{q}{RC} = i = -\frac{\mathrm d q}{\mathrm d t},$$
+	where we note that $\mathrm d q < 0$. Solving for the charge $q(t)$ on the capacitor, we have 
+	$$q(t) = q_0e^{-\frac{t}{RC}},$$
+	$$i(t) = i_0e^{-\frac{t}{RC}},$$
+	$$q_0 = CV.$$
+	If we plotted $q(t)$ with $t$, we would note that $q(t)$ starts out at a maximum and decreases to 0 over time. 
+	
+	\end{enumerate}
+
+\section{March 16, 2017}
+\subsection{Circuits Cont'd}
+
+According to the linear model, the resistivity $\rho$ in metals increases with increasing $T$. In reality, the real result slightly slopes away from the linear model predicted. On a $\rho$ and $T$ graph, the slope at $\rho_0$ and $T_0$ is given as $\rho\alpha$. In semiconductors, $\rho$ decreases with increasing $T$. One the other hand, superconductors have $\rho=0$ for $T < T_C$. 
+
+\begin{example}
+A switch is initially open, so the capacitor of $0.001F$ connected to a $10V$ battery and a $10\Omega$ resistor is uncharged. At time $t=0$, the switch is closed. Determine the voltage across the capacitor immediately after the switch is closed. 
+\end{example}
+
+At $t=0$, the charge is 0. Thus, since $V = \frac{q}{C}$, $V = 0$. 
+
+The constant $RC$ appears in the exponential factor for both the charging and discharging of capacitors. What does it represent? The units of $RC$ are seconds. We call $RC$ the \textbf{RC time constant} and it tells us how quickly a capacitor can charge or discharge,
+$$RC \equiv \tau.$$
+After a time $\tau$, the charge on a discharging capacitor is reduced by a factor of $1/e$. After a time $N\tau$, it is reduced by a factor of $1/e^N$. Thus,
+$$q(t) = Q_0e^{-\frac{t}{\tau}}.$$
+
+\begin{example} An RC circuit consists of a $12V$ source with internal resistance $0.5\Omega$. A switch connects a $10mF$ capacitor to this voltage source or to a $25\Omega$ resistor. Initially the switch is open and the capacitor is uncharged. At time $t = 0s$, the switch is thrown to the left, connecting the capacitor to the battery. At time $t = 15 ms$ the switch is thrown to the right, connecting the capacitor to the resistor. Determine the amount of charge that builds up on the capacitor while it is connected to the battery. Determine the voltage across the resistor as a function of time as the capacitor discharges, and the ratio of the charging time to discharging time.
+\end{example}
+
+When we are charging the capacitor, we make use of $q(t) = Q_f\left(1-e^{-\frac{t}{RC}}\right)$. A fully charged capacitor has charge $Q_f = CV = 10mF \cdot 12V = 120mC$. The RC time constant is $\tau = RC = 0.5\Omega \cdot 10mF = 5ms$. At $15ms$, the charge is given by 
+$$q(t) = 120mC\left(1-e^{-\frac{15}{5}}\right) = 114mC.$$
+When discharging the capacitor, the expression for voltage is 
+$$V = RI_0e^{-\frac{t}{RC}} = \frac{q_0}{C}e^{-\frac{t}{RC}}.$$
+Thus, substituting values into this equation, where $q_0 = 114mC$, $C = 10mF$, and $RC = 25\Omega \cdot 10mF = 250ms$, we find that 
+$$V = (11.4V)e^{-\frac{t}{0.25}}.$$
+Lastly, the charging and discharging times are given by $\tau$. Thus, in the charging phase, this was $0.5ms$, whereas in the discharging phase, this was $25ms$. Thus, the ratio of charging to discharging times is $1/50$. 
+
+\section{March 20, 2017}
+\subsection{Magnetic Fields}
+
+Like poles repel, while unlike poles attract. Magnetism is not the same as electricity. For instance, cutting a magnet does not create one north pole piece and one south pole piece. Magnetic monopoles have not been verified. That is, we cannot have a north pole without a south pole. Magnetic fields are necessarily three dimensional. Magnetic field lines never start or stop anywhere. When Oersted was giving a physics lecture in 1819, he realized that compass needles responded to the current in a straight wire. The compass needles pointed tangle to a circle around the wire. The needle of a compass is a small magnet. Geographically, the south magnetic pole lies near the geographic north pole. Hence, the north side of a compass points towards this direction. 
+
+To denote vectors heading into the page, we use a cross. To denote vectors leaving the page, we use a dot. While an electric force acts on a charge regardless of its motion, the magnetic force acts only on a moving charge. Given a charge $q$ moving with velocity $\vec{v}$, the magnetic field $\vec{B}$ induces a magnetic force $\vec{F}$ that is perpendicular to $\vec{v}$ and $\vec{B}$, with magnitude of 
+$$\vec{F}_B = q\vec{v} \times \vec{B}.$$
+Thus, the magnitude is given by 
+$$F_B = qvB\sin(\alpha),$$
+where $\alpha$ is the angle between $\vec{v}$ and $\vec{B}$. The direction is given by the right hand rule. 
+
+The SI unit of magnetic field is the Tesla, and is equal to 1 Newton per unit Ampere multiplied by meters. However, a Tesla $T$ is relatively large, so a more useful unit is the Gauss, where $10000G = 1T$. In these units, Earth's magnetic field is around $0.5G$. 
+
+\subsection{Circulating Charged Particle}
+Charged particles in uniform magnetic fields undergo uniform circular motion. The radius of the circle depends on how fast the particle is moving. Since circular motion is given by 
+$$\|\vec{F}\| = \frac{mv^2}{r},$$
+we can equate the two equations where
+$$\|\vec{F}_B\| = \|q\|vB.$$
+Thus, $$r = \frac{mv}{\|q\|B}.$$
+For instance, suppose that $\vec{B}$ points into the page. Then, $\vec{v}$ points perpendicular to $\vec{B}$. The magnetic force is always  perpendicular to $\vec{v}$, causing the particle to move in a circle. This is the basis of cyclotron motion. Earth's Van Allen belt (aurora borealis/australis) is an example of a magnetic ion trap. The charged particles spiral around the magnetic field lines. The Earth's magnetic field leads particles into the atmosphere near the poles, causing the aurora. 
+
+\section{March 22, 2017}
+\subsection{Magnetic Field}
+Since $r = \frac{mv}{\|q\|B},$ this means that since $v = \frac{2\pi r}{T}$, solving for $T$, we obtain 
+$$T = \frac{2\pi m}{\|q\|B},$$
+where $T$ is the period of time it takes to make one cycle. The frequency is therefore 
+$$f = \frac{\|q\|B}{2\pi m}.$$
+The period (and frequency) of the circular motion depends on the B-field strength and the charge-to-mass ratio $q/m$. Splitting up the velocity into a component parallel to the B-field and a component perpendicular to the B-field immediately leads to helical motion. The velocity component perpendicular to the field causes circling, which is stretched upward by the parallel component. Note that since the magnetic field does not change the velocity, the kinetic energy remains constant. 
+
+\subsection{Cyclotrons and Synchrotrons}
+We may sometimes need beams of high energy particles. Two accelerators that employ a magnetic field to repeatedly bring particles back to an accelerating region are the \textbf{cyclotron} and the \textbf{proton synchrotron}. They key to the operation of a cyclotron is that the frequency $f$ at which the proton circulates in the magnetic field (and that does not depend on its speed) must be equal to the fixed frequency $f_{osc}$ of the electrical oscillator. The protons spiral outwards in a cyclotron, picking up energy in the gap. In the proton synchrotron, the magnetic field $B$ and the oscillator frequency $f_{osc}$, instead of having fixed values as in the conventional cyclotron, are made to vary with time during the accelerating cycle. That is, the frequency of the circulating protons remain in step with the oscillator at all times. Additionally, the protons follow a circular path, not a spiral. Thus, the magnet needs to extend only along that circular path, and not over some $4\cdot 10^6 m^2$. An application is in mass spectrometers. 
+\subsection{Crossed Field - Discovery of the Electron}
+A modern version of J.J. Thomson's apparatus for measuring the ratio of mass to charge for the electron. If a charged particle moves through a region containing both an electric field and a magnetic field, it can be affected by both an electric force and a magnetic force. When two fields are perpendicular to each other, they are said to be \textbf{crossed fields}. 
+
+\subsection{Crossed Field- The Hall Effect}
+A beam of electrons in a vacuum can be deflected by a magnetic field. In 1879, Edwin H. Hall showed that drifting conduction electrons in a copper wire can be deflected by a magnetic field. Due to a magnetic field, the net charge can build up on the edges. In equilibrium, current still flows. We need to balance the magnetic and electric forces on the charge carriers. Equating 
+$$F_B = qv_dB,$$
+$$F_E = \frac{\Delta V q}{d},$$
+we obtain 
+$$\Delta V_H = v_dBd,$$
+where $d$ is the distance from positive to negative, $\Delta V_H$ is the voltage between this distance, and $v_d$ is the speed perpendicular to the direction from $+$ to $-$. This is the voltage established across a conductor carrying a current in a magnetic field. It can also be the voltage across a conductor that is moving through a magnetic field. The drift speed can be related to current, where 
+$$v_d = \frac{i}{neA},$$
+where $A=ld$ and $n$ is a material property. We can then relate the Hall voltage to known quantities. In practical applications, we solve for the magnetic field using the Hall voltage, 
+$$B = \frac{nel\Delta V}{i}.$$
+
+A similar concept is a velocity selector, where a charge is sent through a region with an electric and magnetic field. Only when the forces are balanced does the charge make it through to the other side without hitting a wall. We can alter the electric and magnetic fields to select the speeds we want, 
+$$qE-qvB = ma.$$
+A \textbf{Bainbridge mass spectrometer} accelerates charges through $\Delta V$ so that they all have the same kinetic energy. The slits $S_1$ and $S_2$ ensure that the beam of particles is collimated. The beam then enters a region of crossed fields, where a narrow slit ensures only particles with a specific speed enter. Particles with the same kinetic energy but different masses and charges will have different radii in the magnetic field. 
+
+\section{March 23, 2017}
+\subsection{Magnetic Force on a Current-Carrying Wire}
+
+For \textbf{free charges} moving in a magnetic field, a force is experienced, 
+$$\vec{F}_B = q\vec{v} \times \vec{B}.$$
+Conductors are full of charges that are free to move around. If a conductor moves in a magnetic field, these charges also experience a magnetic force. A \textbf{straight wire} carrying a current $i$ in a uniform electric field experiences a sideways force, 
+$$\vec{F}_B = i\vec{L} \times \vec{B},$$
+where $i$ is current, $L$ is the length vector that has a magnitude $L$ and is directed along the wire segment in the direction of the conventional current, and $B$ is the magnetic field. We note that current in wires is nothing more than charges in motion. It does not matter if we consider $-q$ moving opposite $i$ or $+q$ moving in the same direction of $i$. 
+If a wire is not straight, or the field is not uniform, then we can imagine the wire broken up into small straight segments. The force on the wire as a whole is then the vector sum of all the forces on the segments of the wire. The differential limit can be expressed as 
+$$\mathrm d \vec{F}_B = i \mathrm d \vec{L} \times \vec{B},$$
+where the direction of the length vector $L$ or $\mathrm d L$ is in the direction of current $i$. 
+The magnitude is therefore 
+$$\left\|\vec{F}_B\right\| = iLB\sin(\theta).$$
+
+\subsection{Torque on a Current Loop}
+We first pick the normal vector to the loop area by using the right hand rule. We curl our fingers in the direction of $i$ so that the direction of our fingers aligns with the direction that current travels, with the thumb pointing in the direction of the normal vector $n$. When the normal vector is at right angles to the magnetic field, all of the magnetic force causes a rotation in the loop. When the normal vector is at some angle to the magnetic field, some of the magnetic force causes rotation of the loop. Lastly, when the normal vector is parallel to the magnetic field, none of the magnetic force causes rotation of the loop. Thus, components of magnetic force that are antiparallel to the normal vector cause torque. Thus, the net force on the loop is the vector sum of the forces acting on its four sides equals 0. The net torque acting on the coil has a magnitude given by 
+$$\tau = NiAB\sin(\theta),$$
+where $N$ is the number of turns in the coil, $A$ is the area of each turn, $i$ is the current, $B$ is the field magnitude, and $\theta$ is the angle between the magnetic field $B$ and the normal vector to the coil $n$. 
+
+
+
+\section{March 27, 2017}
+\subsection{Biot-Savart Law}
+
+Magnetic field are caused by moving charges. Charged particles with spin also produce magnetic fields. This is given by 
+$$\vec{B} = \frac{\mu_0}{4\pi}\frac{q\vec{v} \times \hat{r}}{r^2},$$
+where $\mu_0$ is the vacuum permeability, and $\vec{r}$ is the vector from the point charge to the point at which we want to find the magnetic field. 
+Alternatively, we can use the definition that $\hat{r} = \vec{r}/\|\vec{r}\|$ to find that 
+$$\vec{B}_{point} = \frac{\mu_0}{4\pi}\frac{q\vec{v}\times \vec{r}}{r^3}.$$
+
+Suppose we have a current carrying wire. The current is simply a bunch of moving charges. To derive the expression for charges in a wire, we consider a charge $\Delta Q$ in a small length $\Delta s$ of a current carrying wire. Thus, in a current segment, the magnetic field is 
+$$\vec{B}_{current} = \frac{\mu_0}{4\pi}\frac{I\Delta \vec{s} \times \hat{r}}{r^2},$$
+where $I$ is the current, and $\Delta \vec{s}$ is the segment. According to the right hand rule, we point the thumb in the direction of current, and the direction of the magnetic field is the direction which the fingers curl. The magnetic field vector points in the direction of the north pole of the compass magnet. The magnetic field vectors are tangent to circles around the wire, pointing in the direction given by the right-hand rule. The field is weaker the farther we are from the wire. Magnetic field lines take the form of circles for current carrying wires. As a result of this, we find that in the z direction into or out of the page, the magnetic field of the infinite straight wire is 
+$$B_z = \frac{\mu_0}{2\pi}\frac{I}{d},$$
+where $d$ is the perpendicular distance of the point from the wire of current $I$. $B_z$ is tangent to a circle around the wire in the right-hand direction. The magnitude of the magnetic field at the center of a circular arc of wire of radius $R$ and central angle $\phi$ (in radians) carrying a current $I$ is given by 
+$$B_{arc} =\frac{\mu_0i\phi}{4\pi R}.$$The right hand rule reveals the field's direction at the center. 
+
+
+\section{March 29, 2017}
+\subsection{Magnetic Field of a Circular Loop}
+Along the center of a circular loop of radius $R$ containing a current $I$, we find that at point $P$ located along the axis at a distance of $z$ from the center of the loop, the magnetic field is given by 
+$$\vec{B}_{loop} = \frac{\mu_0IR^2}{2\left(z^2+R^2\right)^{\frac{3}{2}}}\hat k.$$
+At a distance of $z=0$, this simplifies to $$\vec{B}_{center} = \frac{\mu_0 I}{2R}\hat{k}.$$
+As a result of this, the magnetic field of a coil that consists of $N$ loops carrying current $I$ around the radius $R$, the magnetic field at the center of the coil is
+$$\vec{B}_{coil} = \frac{\mu_0N I}{2R}\hat{k}.$$
+
+
+
+
+
+
+
+
+
+
+\subsection{Force Between Two Antiparallel Currents}
+
+We recall that the magnetic force due to current is 
+$$F = I\vec{l} \times \vec{B},$$
+where $I$ is the current, $l$ is the length of the wire through which the current flows, and $B$ is the magnetic field. Given that the magnitudes of the magnetic fields in the wires is 
+$$B = \frac{\mu_0I}{2\pi d},$$
+we note that the force of one wire on another which is parallel to it is 
+$$\frac{\mu_0 l I_1I_2}{2\pi d},$$ where 
+$I_1$ and $I_2$ denote the current in the first and second wires respectively, and $d$ is the distance between the wires. If the magnetic fields are opposite in between the wires, then the force is attractive towards each other. Otherwise, the force is repulsive and away from each other. 
+
+
+\subsection{Dipole Fields}
+Magnetic fields form a magnetic dipole. Note that magnetic field lines are continuous, since they travel from the south pole to the north pole within the magnet. Thus, the magnetic field lines do not stop at the poles. The magnetic field lines from a magnet point out of the north pole 
+and into the south pole, The magnetic flux passing through an arbitrary Gaussian surface is therefore 0, 
+$$\Phi_B = \oint\vec{B}\cdot\mathrm d \vec{a} = 0.$$
+The magnetic field through a closed surface is always 0. There is no enclosed magnetic charge since there is no way to isolate a north or south magnetic pole. Thus, in contrast to the simplest electric field that results from a point charge, the simplest magnetic field results from a magnetic dipole. 
+
+\subsection{Maxwell's Equations}
+All of electricity and magnetism an be described by \textbf{Maxwell's equations}, 
+$$\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0},$$
+$$\nabla \cdot \vec{B} = 0,$$
+$$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t},$$
+$$\nabla \times \vec{B} = \mu_0\vec{J} + \mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}.$$
+We note that $c = 1/\sqrt{\mu_0\epsilon_0}$. We have currently learned about two of Maxwell's equations, since 
+$$\Phi_E = \oint \vec{E} \cdot \mathrm d \vec{a} = \frac{Q_{enc}}{\epsilon_0},$$
+$$\Phi_B = \oint \vec{B} \cdot \mathrm d \vec{a} = 0.$$
+In magnetostatics, we make use of \textbf{Ampere's law}. 
+
+
+\section{March 30, 2017}
+\subsection{Ampere's Law}
+
+\textbf{Ampere's law} is evaluated by the line integral of $B$ along a path. The integration path is a circle of radius $d$. The integration starts and ends at the same point. $\vec{B}$ is everywhere tangent to the integration path, and has a constant magnitude. However, the infinitesimal length $\mathrm d l$ is always in a direction tangent to the closed loop. Ampere's law is true for any shape of path and any current distribution. 
+
+As opposed to a Gaussian surface, the integration path for magnetic fields is a closed curve. We only consider the currents that pass through the bounded area. Only the currents encircled by the loop are used in Ampere's law. To assign the sign to a current used in Ampere's law, we use the right hand rule.
+
+\begin{example}
+Suppose we are given a current carrying wire with radius $r_0$. Determine the magnetic field inside the solid current carrying wire, and outside of it. The length of the solid wire is infinite and the current $I$ is uniformly distributed throughout the solid wire. 
+\end{example}
+
+When we are outside, we choose an Amperian loop with radius $r>r_0$. Evaluating the left side of the equation, we have 
+$$\oint \vec{B}\cdot \mathrm d \vec{l} = BL = B2\pi r.$$
+The right side gives $$\mu_0I_{enc} = \mu_0I.$$
+Thus, $$B = \frac{\mu_0I}{2\pi r}.$$
+When we are inside the wire, we have $r<r_0$. Thus, the left side of the equation remains the same, since $BL = B2\pi r$, but the right side must now account for the new amount of enclosed current,
+$$\mu_0I_{enc} = \mu_0JA = \mu_0\frac{Ir^2}{r_0^2}.$$
+Thus, the magnetic field inside the wire is 
+$$B = \frac{\mu_0Ir}{2\pi r_0^2}.$$
+Note that when we are within a wire, the magnetic field changes linearly with curtent. When we are outside of a wire, the magnetic field changes inversely with current. 
+
+\subsection{Solenoids and Toroids}
+The magnetic field of a solenoid is 
+$$B_{solenoid} = \mu_0ni,$$
+where $n=N/L$ with $N$ being the number of turns of coil per unit length $L$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{March 31, 2017}
+\subsection{Application of Ampere's Law}
+
+We recall that Ampere's law is given by 
+$$\oint \vec B \cdot \mathrm d \vec l = \mu_0I_{encl},$$
+where current $I$ passes through an area bounded by a closed curve. 
+The integration path is a closed curve such that currents considered pass through the bounded area. The current in the direction of the thumb according to the right hand rule is positive.
+
+
+\section{April 3, 2017}
+\subsection{Faraday's Law and Lenz's Law}
+
+By now, we know that electric currents cause electric fields, since magnetic fields can be caused by moving electrical charges. However, the reverse is also true. Magnetic fields can cause electrical currents. Only changing magnetic fields can cause currents. At the time when a switch to a circuit connected to a solenoid is closed or opened, there exists a momentary current. In order for a magnetic field to change, the strength of the field, the direction, the size of the loop of wire, or the direction of the loop of wire could change. 
+
+The magnetic flux of a uniform electric field, 
+$$\Phi_B = \vec{B} \cdot \vec{A} = BA\cos(\theta),$$
+where the units of magnetic flux are $T\cdot m^2$. Magnetic flux can be though of as counting the field lines that pass the closed region. According to Faraday's experiment, charges do not start moving spontaneously. A current requires an electromotive force to exist. Thus, 
+$$I_{induced} = \frac{\epsilon}{R},$$
+where the emf associated with a changing magnetic flux results in an induced emf. The induced emf is the rate of change of magnetic flux through the loop. Faraday discovered that there is an induced emf in the secondary circuit given by 
+$$\epsilon  =-\frac{\mathrm d\Phi_M}{\mathrm d t}.$$
+This is the new generalized law knnown as \textbf{Faraday's law}. For a coil of $N$ turns, we have 
+$$\epsilon  =-N\frac{\mathrm d\Phi_M}{\mathrm d t}.$$
+This is valid even if $\Phi_M$ changes because of a time dependent $A$ or an angle $\phi$ (without changing the magnetic field). Thus, evaluating this, we have three possible terms 
+\begin{align*}\epsilon  &=-\frac{\mathrm d\Phi_M}{\mathrm d t}\\&=-\frac{\mathrm d}{\mathrm d t}BA\cos(\phi)\\
+&=-\frac{\mathrm d B}{\mathrm d t}A\cos(\phi)-\frac{\mathrm d A}{\mathrm d t}B\cos(\phi)+\frac{\mathrm d \phi}{\mathrm d t}{BA\sin(\phi)}
+\end{align*}
+
+Suppose we have the flux through a circuit with area $A$m so magnetic flux with uniform magnetic field perpendicular to this would be $\Phi_M = AB$. Let the dimensions of this be $l$ and $x$, so $\Phi_M = xlB$. However, if we move the right side of the circuit so that it encompasses a larger area by increasing $x$ at a velocity $\vec{v}$, we can apply Faraday's law to find that 
+\begin{align*}
+	\epsilon &= \left\|\frac{\mathrm d \Phi_M}{\mathrm d t}\right\|\\
+	&= \frac{\mathrm d}{\mathrm d t}xlB\\
+	&= vlB
+\end{align*}
+We then use Ohm's law to find the induced current
+$$I = \frac{\epsilon}{R} = \frac{vlB}{R}.$$
+We note that the induced current depends on either a changing magnetic field, a changing area, or a changing angle. Otherwise, there is no induced current. 
+
+The negative sign from Faraday's law indicates that the system opposes the change caused by the induced current. The changing magnetic field generates an induced current which creates an induced magnetic field which, in turn, resists the change in magnetic flux. \textbf{Lenz's law} states that the induced current from Faraday's law is always in a direction such that the induced magnetic field from the induced current opposes the change in the magnetic flux through the loop. The current always generates a field to oppose a change in flux. 
+
+We recall that Faraday's law relates the strength of the induced current. However, the cause of this current is the induced electric field that is generated by the changing magnetic field. A non-Coulomb electric field is created by a changing magnetic field. If we consider a loop in a wire carrying a current $I_1$, and then increase the current to $I_2>I_1$ to increase the magnetic field, the changing $B$ fields induce non-conservative $E$ fields, 
+$$-\frac{\mathrm d \vec{B}}{\mathrm d t} = \nabla \times \vec{E}.$$
+
+\section{April 6, 2017}
+\subsection{Applications of Faraday's Law}
+
+An \textbf{alternator} is an electromechanical device that converts mechanical energy to electrical energy in the form of alternating current. In principle, any AC electrical generator can be called an alternator. Alternators are used in cars to charge the battery and to power the electrical system when the engine is running. In practice, the loop is stationary and only the magnet rotates. For the alternator, the magnetic field and the area are constant, but the angle between the two changes constantly, where 
+$$\theta = \omega t.$$
+Hence, the time-dependent magnetic flux is 
+$$\Phi_B = BA\cos(\theta) = BA\cos(\omega t),$$
+The alternator therefore generates a sinusoidally varying electromotive force,
+$$\epsilon =- \frac{\mathrm d \Phi_B}{\mathrm d t} = -(-\omega BA\sin(\omega t)) = \omega BA\sin(\omega t).$$
+
+Recall that flux is perpendicular to the surface. Suppose that the magnetic field points to the right. Thus, when the area vector (perpendicular to the surface) is in the same direction as the magnetic field, 
+flux $\Phi_B$ is at its most positive value, while the electromotive force $\epsilon =-\mathrm d \Phi_B/\mathrm d t$ is zero. The flux proceeds to decrease as the area vector proceeds to point downwards at $90^{\circ}$ from the magnetic field. This is when the flux is decreasing most rapidly, and corresponds to the largest positive electromotive force (since electromotive force is negative of the rate of change of flux). When the area vector points in the opposite direction to the magnetic field, flux is at its most negative value, and the electromotive force is zero. The flux begins to increase until it reaches the point when it increases most rapidly before leveling off. This corresponds to when the area vector is pointing upwards, with the largest negative electromotive force. This cycle then repeats. 
+
+Recall that the magnetic field of a circular loop is given by $$\vec{B}_{loop} = \frac{\mu_0IR^2}{2\left(z^2+R^2\right)^{\frac{3}{2}}}\hat k.$$
+At distances from the loop where $z>>R$, the $R$ term in the denominator cancels out, leaving 
+$$B_{loop} = \frac{\mu_0IR^2}{2z^3}.$$
+Multiplying the numerator and denominator by $2\pi$, we get 
+$$B_{loop} = \frac{\mu_0AI}{2\pi z^3},$$
+where $A$ is the area of the loop. This is the magnetic field on the axis of a magnetic dipole. 
+
+\subsection{Magnetic Dipole Moment}
+We define the \textbf{magnetic dipole moment} as being a vector perpendicular to the loop, in the direction of the right-hand rule. The magnitude is 
+$$\|\vec{\mu}\| = AI,$$
+where $A$ is the area of the loop and $I$ is the current. 
+
+
+\section{April 6, 2017}
+\subsection{Review of Faraday's Law}
+Faraday discovered that there is an induced electromotive force in the secondary circuit given by 
+$$\epsilon = -\frac{\mathrm d \Phi_M}{\mathrm d t},$$
+which can be generalized for $N$ turns of coil,
+$$\epsilon = -N\frac{\mathrm d \Phi_M}{\mathrm d t}.$$
+The definition of magnetic flux is 
+$$\Phi_M = \int\vec{B}\cdot \mathrm d \vec{A} = AB\cos(\theta).$$
+
+For example, consider an induced current that results from increasing the side length of a loop to increase the area. We have 
+$$\epsilon = \left\|\frac{\mathrm d \Phi_M}{\mathrm d t}\right\| = \frac{\mathrm d}{\mathrm d t}xlB = vlB,$$
+where $v$ is the speed at which the side length is being increased. The induced current is $$I = \frac{\epsilon}{R} =\frac{vlB}{R}.$$
+Now, the force is given by $$F = iL\times B = BiL\sin\left(90^{\circ}\right).$$
+Thus, Substituting the above expression for current $I$, we get
+$$F = \frac{B^2L^2v}{R}.$$
+This can be thought of as the rate at which work is done on the loop as it is pulled from the magnetic field. The work that is done by pulling the loop through the magnetic field appears as thermal energy in the loop, since $P=Ri^2$. 
+
+When we have changing magnetic fields, there is an induced electric field. This is what causes the induced currents. A coulomb electric field is created by charges, whereas a non-Coulomb electric field is created by a changing magnetic field. 
+
+\subsection{Eddy Currents}
+So far, we have considered induction in circuits, where the induced current was confined to wires. Induction also happens if the magnetic flux through extended metallic objects changes (we can replace a conducting loop with a solid conducting plate for example). As with wires, the induced currents attempt to keep the flux stable. The result is \textbf{eddy currents}, which are given by 
+$$I = -\frac{1}{R}\frac{\mathrm d \Phi_B}{\mathrm d t},$$
+where $R$ is the resistance. The direction of the currents can be found suing Lenz's law. The relative motion of the field and the conductor again induces a current in the conductor, thus creating an opposing force. Therefore, as resistance increases, there is less induced current that opposes the original motion. 
+
+\subsection{Inductors and Inductance}
+An \textbf{inductor} is a device that can be used to produce a known magnetic field in a specified region. An inductor is a passive electrical component that can store energy in a magnetic field. Note that a changing magnetic flux produces an induced electromotive force in the direction which opposes the change. Changing the current through the inductor changes the flux through it, thus creating a back-electromotive force. If a current $i$ is established through each of the $N$ windings of an inductor, a magnetic flux $\Phi_B$ links those windings. The inductance $L$ of the inductor is 
+$$L = \frac{N\Phi_B}{i},$$
+where inductance is measured in henries. 
+\begin{remark}
+Energy in a capacitor is stored in the electric field, while energy in an inductor is stored in the magnetic field. 
+\end{remark}
+The inductance per unit length near the middle of a long solenoid of cross-sectional area $A$ with $n$ turns per unit length is given by 
+$$\frac{L}{l} = \mu_0n^2A.$$
+The potential difference across an inductor is 
+$$\Delta V = -L\frac{\mathrm d i}{\mathrm d t}.$$
+
+\subsection{Self-Induction}
+If two coils, which we now call inductors, are near each other, a current $i$ in one coil produces a magnetic flux $\Phi_B$ through the second coil. We have seen that if we change this flux by changing the current, an induced electromotive force appears in the second coil according to Faraday's law. An induced electromotive force appears in the first coil as well. The process of \textbf{self induction} states that a self induced electromotive force $\epsilon_L$
+appears in any coil in which the current is changing. 
+Thus, we combine our understanding of Faraday's law of induction $N\Phi_B = Li$ and Faraday's law $\epsilon_L = -N\mathrm d \Phi_B/\mathrm d t$ to get 
+$$\epsilon_L = -L\frac{\mathrm d i}{\mathrm d t}.$$
+Note that a self-induced electromotive force appears whenever the current changes with time. The magnitude of the current has no influence on the magnitude of the induced electromotive force, since only the rate of change of the current matters. 
+
+\subsection{Energy Storage in Inductors}
+If we build up the current from $I_0=0$ to $I_f$, at time $t$ when we have achieved a current $I$, we have to work against an opposing electromotive force in order to achieve a further increase in current. Our energy source is doing work per unit time. From integrating power, we find that the total work done or energy stored in the system to be 
+$$U =  \frac{1}{2}LI^2.$$Energy density is 
+$$u=\frac{U}{V} = \frac{U}{Al}.$$
+For a solenoid, we can combine this equation, along with $B=\mu_0ni$ and $L/l-\mu_0n^2A$ to find that the energy density is 
+$$u= \frac{B^2}{2\mu_0}.$$
+
+\section{April 7, 2017}
+\subsection{Mutual Induction}
+Suppose we have two coils. The magnetic field $B_1$ produced by current $i_1$ in coil $1$ extends through coil 3. If $i_1$ is varied (by varying resistance $R$), an electromotive force is induced in coil $2$ and current registers on the meter connected to coil $2$. Thus, if coils $1$ and $2$ are near each other, a changing current in either coil can induce an electromotive force in the other. This mutual induction is described by 
+$$\epsilon_1 = -M\frac{\mathrm d i_2}{\mathrm d t},$$
+$$\epsilon_2= -M\frac{\mathrm d i_1}{\mathrm d t}.$$
+Mutual inductance depends on the geometry of the two coils. Typical values for $M$ are in the range of $\mu H-mH$. 
+
+If the current in coil $1$ is changing, then the changing flux through coil $2$ induces an electromotive force in coil 2. The induced electromotivve force in coil $2$ is 
+$$\epsilon_2 = -N_2\frac{\mathrm d \Phi_{B2}}{\mathrm d t},$$
+where $\Phi_{B2}$ is the magnetic flux through a single loop of coil $2$, and $N_2$ is the number of loops. The magnetic field in coil $2$ is proportional to the current through coil $1$, so 
+$$\mathrm d B = \frac{\mu_0}{4\pi} \frac{i_1\mathrm d l \times r}{r^2},$$
+which is the Biot-Savart law. Hence, the magnetic flux through coil $2$ is proportional to $i_1$, where 
+$$N_2\Phi_{B2} = M_{21}i_1,$$
+$$\epsilon_2 = -N_2\frac{\mathrm d \Phi_{B2}}{\mathrm d t} = -M_{21}\frac{\mathrm d i_1}{\mathrm d t}.$$
+
+A long solenoid will produce a magnetic field that is proportional to the current $I_1$ and the number of turns per unit length $n_1$, such that 
+$$B_1 = \frac{\mu_0N_1I_1}{L} = \mu_0n_1I_1.$$
+The total flux through each loop of the outer coil is 
+$$\Phi_{B2} = B_1A_1.$$
+Thus, the mutual inductance is 
+$$M = \frac{N_2\Phi_{B2}}{I_1} = \frac{N_2(B_1A_1)}{I_1} = \frac{\mu_0A_1N_1N_2}{L},$$
+so it does not depend on current $I$.  
+\begin{example}
+Determine the mutual inductance for a $0.5m$ long coil with a $10cm^2$ area with $N_1=1000$ and $N_2=10$. If a rapidly increasing current is drive through the outer coil at $i_2(t) = 2.0\cdot10^6t$, determine the electromotive force that is induced on the inner coil.
+\end{example}
+By applying the formula, we have 
+$$M=\frac{\left(4\pi\cdot 10^{-7}\right)\left(1.0\cdot10^{-3}\right)(1000)(10)}{0.5} = 2.5\cdot 10^{-5}H.$$ To determine the electromotive force, we now use 
+$$\epsilon_1 = -M\frac{\mathrm d i_2}{\mathrm d t} = -\left(2.5\cdot10^{-5}\right)\frac{\mathrm d}{\mathrm d t}\left(2.0\cdot10^6t\right) = -50V.$$
+
+\begin{remark}
+We note that this allows electrical energy in one circuit to be converted to electrical energy in a separate device. 
+\end{remark}
+\begin{example}
+Suppose we have two nested circular coils of wire, where the larger coil has a radius of $a$ and consists of $N_1$ turns. The smaller coil of radius $b$ consists of $N_2$ turns and is both coplanar and coaxial with the larger coil. Assume that $b<<a$, so that the magnetic field of the larger coil is approximately uniform over the area of the smaller coil. If there is only current in the larger coil $1$ of radius $a$, determine the mutual inductance of the combination. 
+\end{example}
+Mutual inductance is given by 
+$$M = \frac{N_2\Phi_{B2}}{i_1 }= \frac{N_1\Phi_{B1}}{i_2 }.$$
+Since we only know the current in coil $1$, we need to use the first expression. The flux through one loop of coil $2$ of area $A_2$ is due to the magnetic field generated by the current in coil $1$. A circular loop of radius $a$ carries a constant current $I$. We have two ways of calculating the magnetic field, by the Biot-Savart law or Ampere's law. Ampere's law is not useful for a loop, so we use the Biot-Savart law to find 
+$$\vec{B}=\frac{\mu_0I}{2a}\hat{k},$$
+so for $N_1$ loops, this is multiplied by $N_1$. Therefore, 
+$$M = \frac{N_1\Phi_{B2}}{i_1} = \frac{N_2BA}{i_1} = \frac{N_2\left(N_1\frac{\mu_0i_1}{2a}\right)\left(\pi b^2\right)}{i_1} = \mu_0N_1N_2\frac{\pi b^2}{2a}.$$
+We expect the result to be proportional to the area of the coil that encounters the field of the outer coil ($\pi b^2$). Additionally, we expect a dependence on $N_1$ and $N_2$, where the field depends on $N_1$ and the flux depends on $N_2$. 
+
+\subsection{Transformers}
+In a transformer, we have a primary winding with $N_P$ turns, and a secondary winding of $N_S$ turns around a transformer core. The primary wining consists of a primary current $I_P$ and a primary voltage $V_P$, while the secondary winding consists of a secondary current $I_S$ and a secondary voltage $V_S$. Through the body of the circular transformer core is a magnetic flux $\Phi$. The voltages and turns can be related by 
+$$\frac{V_P}{N_P} = \frac{V_S}{N_S}.$$
+Primary voltage and secondary voltage are given by 
+$$V_P = N_P\frac{\mathrm d \Phi}{\mathrm d t},$$
+$$V_S = N_S\frac{\mathrm d \Phi}{\mathrm d t},$$
+$P_{in}$ is given by the primary voltage multiplied by the primary current, and $P_{out}$ is given by the secondary voltage multiplied by the secondary current. Relating these equations, we find that 
+$$I_PN_P = I_SN_S.$$
+
+\subsection{RL Circuit}
+For a simple circuit consisting of a voltage source, a resistor, and an inductor connected in series, the voltage is $V-L\frac{\mathrm d i}{\mathrm d t}-iR = 0$ by applying KVL If we place a switch between the positive end of the voltage source and the inductor, we can manipulate current flow. Faraday's law applies, so the change in magnetic field in the inductor $L$ means that there is a back electromotive force induced in $L$. In this case, at $t=0$, we have $i(0) = 0$, so the inductor acts like a battery. After a long time, $i=V/R$, so the inductor acts like a wire. 
+
+Suppose that the components have all been connected for a very long time. At $t=0$, the switch $S$ is opened to a state such that the inductor is discharging. The equation for current is then given by 
+$$i(t) = i(0)e^{-\left(\frac{Rt}{L}\right)}.$$
+When the circuit is open for a long time, and then closed at $t=0$, the inductor begins charging, where the current is given by 
+$$i(t) = i_{max}\left(1-e^{-\left(\frac{Rt}{L}\right)}\right),$$
+where $i_{max} = \epsilon/R$. To determine the initial rate of change of current, we note that the initial voltage in the resistor is $0$, since $i=0$ at time $t=0$. Thus, we solve 
+$$V = L\frac{\mathrm d t}{\mathrm d t}$$
+for the change in current $\mathrm d i/\mathrm d t$. Note that the inductor slows the rate of change in current. The inductor creates an electromotive force that opposes the change in current. Thus, the inductor creates an electromotive force in the opposite direction to oppose the increase in current. When the rate of change of current decreases, then the induced electromotive force reduces. 
+
+\begin{remark}
+Memorize charging and discharging of inductors and capacitors, as well as the time constant, as these will not be provided on the exam. 
+\end{remark}
+
+http://www.rakeshkapoor.us/index-2.html
+http://www.cabrillo.edu/~jmccullough/physics4b/
+http://www.phys.ufl.edu/~korytov/phy2049/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

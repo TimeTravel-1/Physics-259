@@ -1,0 +1,118 @@
+\contentsline {section}{\numberline {1}January 11, 2017}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Fundamental Particles}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Charge Experiment}{5}{subsection.1.2}
+\contentsline {section}{\numberline {2}January 12, 2017}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Coulomb's Law}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Superposition Principle}{7}{subsection.2.2}
+\contentsline {section}{\numberline {3}January 13, 2017}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Van de Graff Generator}{7}{subsection.3.1}
+\contentsline {section}{\numberline {4}January 16, 2017}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Coulomb's Law Examples}{7}{subsection.4.1}
+\contentsline {section}{\numberline {5}January 28, 2017}{8}{section.5}
+\contentsline {subsection}{\numberline {5.1}Coulomb's Law Examples Cont'd}{8}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Electric Force of Dipole}{8}{subsection.5.2}
+\contentsline {section}{\numberline {6}January 19, 2017}{9}{section.6}
+\contentsline {subsection}{\numberline {6.1}Electric Force of Line of Charge}{9}{subsection.6.1}
+\contentsline {section}{\numberline {7}January 20, 2017}{9}{section.7}
+\contentsline {subsection}{\numberline {7.1}Electric Force Examples}{9}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Charge Geometries}{10}{subsection.7.2}
+\contentsline {section}{\numberline {8}January 23, 2017}{11}{section.8}
+\contentsline {subsection}{\numberline {8.1}Electric Fields}{11}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Electric Field of a Dipole}{12}{subsection.8.2}
+\contentsline {section}{\numberline {9}January 25, 2017}{12}{section.9}
+\contentsline {subsection}{\numberline {9.1}Electric Field of Line of Charge}{12}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Electric Field of Ring of Charge}{12}{subsection.9.2}
+\contentsline {section}{\numberline {10}January 26, 2017}{12}{section.10}
+\contentsline {subsection}{\numberline {10.1}Electric Field of Charged Disk}{12}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Electric Field Lines}{13}{subsection.10.2}
+\contentsline {section}{\numberline {11}January 27, 2017}{13}{section.11}
+\contentsline {subsection}{\numberline {11.1}Electric Flux}{13}{subsection.11.1}
+\contentsline {section}{\numberline {12}January 30, 2017}{14}{section.12}
+\contentsline {subsection}{\numberline {12.1}Electric Flux Cont'd}{14}{subsection.12.1}
+\contentsline {section}{\numberline {13}February 1, 2017}{15}{section.13}
+\contentsline {subsection}{\numberline {13.1}Gauss' Law}{15}{subsection.13.1}
+\contentsline {section}{\numberline {14}February 2, 2017}{15}{section.14}
+\contentsline {subsection}{\numberline {14.1}Electric Field in Shell of Charge}{15}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Electric Field in Shell of Charge}{16}{subsection.14.2}
+\contentsline {section}{\numberline {15}February 3, 2017}{16}{section.15}
+\contentsline {subsection}{\numberline {15.1}Gauss' Law Cont'd}{16}{subsection.15.1}
+\contentsline {section}{\numberline {16}February 6, 2016}{17}{section.16}
+\contentsline {subsection}{\numberline {16.1}Charged Isolated Conductor}{17}{subsection.16.1}
+\contentsline {section}{\numberline {17}February 8, 2017}{17}{section.17}
+\contentsline {subsection}{\numberline {17.1}Electric Field of Charged Wire and Plane}{17}{subsection.17.1}
+\contentsline {section}{\numberline {18}February 9, 2017}{18}{section.18}
+\contentsline {subsection}{\numberline {18.1}Examples}{18}{subsection.18.1}
+\contentsline {section}{\numberline {19}February 15, 2017}{18}{section.19}
+\contentsline {subsection}{\numberline {19.1}Electric Potential}{18}{subsection.19.1}
+\contentsline {section}{\numberline {20}February 16, 2017}{19}{section.20}
+\contentsline {subsection}{\numberline {20.1}Electric Potential Cont'd}{19}{subsection.20.1}
+\contentsline {section}{\numberline {21}February 27, 2017}{20}{section.21}
+\contentsline {subsection}{\numberline {21.1}Potential Gradient}{20}{subsection.21.1}
+\contentsline {subsection}{\numberline {21.2}Electric Potential of a Dipole}{21}{subsection.21.2}
+\contentsline {section}{\numberline {22}March 1, 2017}{21}{section.22}
+\contentsline {subsection}{\numberline {22.1}Electric Potential of a Line of Charge}{21}{subsection.22.1}
+\contentsline {subsection}{\numberline {22.2}Electric Potential of a Ring Along its Axis and a Charged Disk}{21}{subsection.22.2}
+\contentsline {subsection}{\numberline {22.3}Electric Potential of a Charged Isolated Conductor}{22}{subsection.22.3}
+\contentsline {section}{\numberline {23}March 6, 2017}{22}{section.23}
+\contentsline {subsection}{\numberline {23.1}Capacitance}{22}{subsection.23.1}
+\contentsline {subsection}{\numberline {23.2}Calculating Capacitance}{23}{subsection.23.2}
+\contentsline {section}{\numberline {24}March 8, 2017}{24}{section.24}
+\contentsline {subsection}{\numberline {24.1}Calculating Capacitance Cont'd}{24}{subsection.24.1}
+\contentsline {subsection}{\numberline {24.2}Capacitors in Parallel and Series}{25}{subsection.24.2}
+\contentsline {subsection}{\numberline {24.3}Energy Stored in an Electric Field}{26}{subsection.24.3}
+\contentsline {section}{\numberline {25}March 9, 2017}{26}{section.25}
+\contentsline {subsection}{\numberline {25.1}Capacitors with a Dielectric}{26}{subsection.25.1}
+\contentsline {subsection}{\numberline {25.2}Atomic View of Dielectrics}{27}{subsection.25.2}
+\contentsline {section}{\numberline {26}March 13, 2017}{28}{section.26}
+\contentsline {subsection}{\numberline {26.1}Electric Current}{28}{subsection.26.1}
+\contentsline {subsection}{\numberline {26.2}Current Density}{28}{subsection.26.2}
+\contentsline {subsection}{\numberline {26.3}Resistance and Resistivity}{29}{subsection.26.3}
+\contentsline {subsection}{\numberline {26.4}Circuits}{29}{subsection.26.4}
+\contentsline {subsection}{\numberline {26.5}Kirchhoff's Loop Rule}{30}{subsection.26.5}
+\contentsline {section}{\numberline {27}March 15, 2017}{31}{section.27}
+\contentsline {subsection}{\numberline {27.1}Ohmic and Non-Ohmic Devices}{31}{subsection.27.1}
+\contentsline {subsection}{\numberline {27.2}Power in Circuits}{31}{subsection.27.2}
+\contentsline {subsection}{\numberline {27.3}Grounding}{31}{subsection.27.3}
+\contentsline {subsection}{\numberline {27.4}Ammeter and Voltmeter}{32}{subsection.27.4}
+\contentsline {subsection}{\numberline {27.5}Non-Ideal Batteries}{32}{subsection.27.5}
+\contentsline {subsection}{\numberline {27.6}RC Circuits (Resistors and Capacitors)}{32}{subsection.27.6}
+\contentsline {section}{\numberline {28}March 16, 2017}{33}{section.28}
+\contentsline {subsection}{\numberline {28.1}Circuits Cont'd}{33}{subsection.28.1}
+\contentsline {section}{\numberline {29}March 20, 2017}{34}{section.29}
+\contentsline {subsection}{\numberline {29.1}Magnetic Fields}{34}{subsection.29.1}
+\contentsline {subsection}{\numberline {29.2}Circulating Charged Particle}{35}{subsection.29.2}
+\contentsline {section}{\numberline {30}March 22, 2017}{35}{section.30}
+\contentsline {subsection}{\numberline {30.1}Magnetic Field}{35}{subsection.30.1}
+\contentsline {subsection}{\numberline {30.2}Cyclotrons and Synchrotrons}{36}{subsection.30.2}
+\contentsline {subsection}{\numberline {30.3}Crossed Field - Discovery of the Electron}{36}{subsection.30.3}
+\contentsline {subsection}{\numberline {30.4}Crossed Field- The Hall Effect}{36}{subsection.30.4}
+\contentsline {section}{\numberline {31}March 23, 2017}{37}{section.31}
+\contentsline {subsection}{\numberline {31.1}Magnetic Force on a Current-Carrying Wire}{37}{subsection.31.1}
+\contentsline {subsection}{\numberline {31.2}Torque on a Current Loop}{38}{subsection.31.2}
+\contentsline {section}{\numberline {32}March 27, 2017}{38}{section.32}
+\contentsline {subsection}{\numberline {32.1}Biot-Savart Law}{38}{subsection.32.1}
+\contentsline {section}{\numberline {33}March 29, 2017}{39}{section.33}
+\contentsline {subsection}{\numberline {33.1}Magnetic Field of a Circular Loop}{39}{subsection.33.1}
+\contentsline {subsection}{\numberline {33.2}Force Between Two Antiparallel Currents}{40}{subsection.33.2}
+\contentsline {subsection}{\numberline {33.3}Dipole Fields}{40}{subsection.33.3}
+\contentsline {subsection}{\numberline {33.4}Maxwell's Equations}{41}{subsection.33.4}
+\contentsline {section}{\numberline {34}March 30, 2017}{41}{section.34}
+\contentsline {subsection}{\numberline {34.1}Ampere's Law}{41}{subsection.34.1}
+\contentsline {subsection}{\numberline {34.2}Solenoids and Toroids}{42}{subsection.34.2}
+\contentsline {section}{\numberline {35}March 31, 2017}{42}{section.35}
+\contentsline {subsection}{\numberline {35.1}Application of Ampere's Law}{42}{subsection.35.1}
+\contentsline {section}{\numberline {36}April 3, 2017}{43}{section.36}
+\contentsline {subsection}{\numberline {36.1}Faraday's Law and Lenz's Law}{43}{subsection.36.1}
+\contentsline {section}{\numberline {37}April 6, 2017}{44}{section.37}
+\contentsline {subsection}{\numberline {37.1}Applications of Faraday's Law}{44}{subsection.37.1}
+\contentsline {subsection}{\numberline {37.2}Magnetic Dipole Moment}{45}{subsection.37.2}
+\contentsline {section}{\numberline {38}April 6, 2017}{46}{section.38}
+\contentsline {subsection}{\numberline {38.1}Review of Faraday's Law}{46}{subsection.38.1}
+\contentsline {subsection}{\numberline {38.2}Eddy Currents}{47}{subsection.38.2}
+\contentsline {subsection}{\numberline {38.3}Inductors and Inductance}{47}{subsection.38.3}
+\contentsline {subsection}{\numberline {38.4}Self-Induction}{47}{subsection.38.4}
+\contentsline {subsection}{\numberline {38.5}Energy Storage in Inductors}{48}{subsection.38.5}
+\contentsline {section}{\numberline {39}April 7, 2017}{48}{section.39}
+\contentsline {subsection}{\numberline {39.1}Mutual Induction}{48}{subsection.39.1}
+\contentsline {subsection}{\numberline {39.2}Transformers}{50}{subsection.39.2}
+\contentsline {subsection}{\numberline {39.3}RL Circuit}{51}{subsection.39.3}
